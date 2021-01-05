@@ -1,0 +1,29 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 5000px;
+}
+
+::selection {
+    color: #ffffff;
+    background: #000000;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000; 
+}
+
+::-webkit-scrollbar-track  {
+    background: #c0c0c0; 
+}
+
+h1, h2, h3, h4{
+    font-family: monospace;
+}
+
+h1{
+    font-size: 80px;
+}
