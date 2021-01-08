@@ -50,34 +50,40 @@ a, p, h1, h2, h3, h4, .t1, .t2, .t3, .t4, li{
     display: flex;
 }
 
-.z-1000{z-index: 1000;}
-
-.z-1100{z-index: 1100;}
-
-.mx-auto{
-    margin: auto;
+.text-center{
+    text-align: center;
 }
 
-.my-auto {
-    margin-top: auto !important;
-    margin-bottom: auto !important;
+.text-left{
+    text-align: left;
 }
 
-.container{
+.text-right{
+    text-align: right;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+@import "margin";
+@import "padding";
+@import "grid";
+@import "z-index";
+
+.container, .container-full{
+    width: 100%;
     margin: auto;
-    max-width: 1320px;
     padding: 0 15px;
     @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {    //iphone x and height>lg
         padding: 0 55px;
     }
 }
 
-.container-full{
-
+.container{
+    max-width: 1320px;
 }
 
 .border{
     border: 1px solid black;
 }
-
-@import "grid";

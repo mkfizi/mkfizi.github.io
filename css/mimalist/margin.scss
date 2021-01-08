@@ -1,0 +1,50 @@
+@for $i from 1 through 10{
+    .m-#{$i}{
+        margin: ((1) * $i) + 0rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .mt-#{$i}{
+        margin-top: ((1) * $i) + 0rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .mb-#{$i}{
+        margin-bottom: ((1) * $i) + 0rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .ml-#{$i}{
+        margin-left: ((1) * $i) + 0rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .mr-#{$i}{
+        margin-right: ((1) * $i) + 0rem;
+    }
+}
+
+@for $i from 1 through 10{
+    .mx-#{$i}{
+        margin: 0rem (((1) * $i) + 0rem);
+    }
+}
+
+@for $i from 1 through 10{
+    .my-#{$i}{
+        margin: (((1) * $i) + 0rem) 0rem;
+    }
+}
+
+.mx-auto{
+    margin: auto;
+}
+
+.my-auto {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
