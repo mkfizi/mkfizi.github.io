@@ -46,12 +46,34 @@ h2{
 }
 
 .home{
-    padding-top: 10vh;
-    padding-bottom: 10vh;
+    height: 100vh;
+
+    @media(min-height: $lg){
+        height: 40vh;
+    }
+
+    // @media(min-height: $lg){
+    //     height: 40vh;
+    // }
+
     .home-text{
+        margin-top: 25vh;
         height: 320px;
         background: url("../img/logo.png");
         background-repeat: no-repeat;
-        background-position: 75% 75%;
+        background-position: center;
+        
+        @media(orientation: landscape){
+            margin: 0;
+        }
+
+        @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
+            margin-top: 20vh;
+            background-position: 75% 50%;
+        }
+
+        @media(min-height: $lg){            
+            margin-top: 10vh;
+        }
     }
 }

@@ -67,7 +67,7 @@ a, p, h1, h2, h3, h4, .t1, .t2, .t3, .t4, li{
     margin: auto;
     max-width: 1320px;
     padding: 0 15px;
-    @media(min-width: $md) and (orientation: landscape), (min-height: $lg){    //iphone x and height>lg
+    @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {    //iphone x and height>lg
         padding: 0 55px;
     }
 }

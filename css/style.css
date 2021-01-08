@@ -47,14 +47,39 @@ h2 {
 }
 
 .home {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  height: 100vh;
+}
+
+@media (min-height: 992px) {
+  .home {
+    height: 40vh;
+  }
 }
 
 .home .home-text {
+  margin-top: 25vh;
   height: 320px;
   background: url("../img/logo.png");
   background-repeat: no-repeat;
-  background-position: 75% 75%;
+  background-position: center;
+}
+
+@media (orientation: landscape) {
+  .home .home-text {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 576px) and (orientation: landscape) {
+  .home .home-text {
+    margin-top: 20vh;
+    background-position: 75% 50%;
+  }
+}
+
+@media (min-height: 992px) {
+  .home .home-text {
+    margin-top: 10vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */
