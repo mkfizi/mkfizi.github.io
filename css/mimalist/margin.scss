@@ -1,6 +1,18 @@
+@import "breakpoint";
+
 @for $i from 1 through 10{
     .m-#{$i}{
         margin: ((1) * $i) + 0rem;
+    }
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .m-#{$name}-#{$name}-#{$i}{
+                    margin: ((1) * $i) + 0rem;
+            }
+        }
     }
 }
 
@@ -10,9 +22,29 @@
     }
 }
 
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .mt-#{$name}-#{$i}{
+                margin-top: ((1) * $i) + 0rem;
+            }
+        }
+    }
+}
+
 @for $i from 1 through 10{
     .mb-#{$i}{
         margin-bottom: ((1) * $i) + 0rem;
+    }
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .mb-#{$name}-#{$i}{
+                margin-bottom: ((1) * $i) + 0rem;
+            }
+        }
     }
 }
 
@@ -22,9 +54,29 @@
     }
 }
 
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .ml-#{$name}-#{$i}{
+                margin-left: ((1) * $i) + 0rem;
+            }
+        }
+    }
+}
+
 @for $i from 1 through 10{
     .mr-#{$i}{
         margin-right: ((1) * $i) + 0rem;
+    }
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .mr-#{$name}-#{$i}{
+                margin-right: ((1) * $i) + 0rem;
+            }
+        }
     }
 }
 
@@ -34,9 +86,29 @@
     }
 }
 
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .mx-#{$name}-#{$i}{
+                margin: 0rem (((1) * $i) + 0rem);
+            }
+        }
+    }
+}
+
 @for $i from 1 through 10{
     .my-#{$i}{
         margin: (((1) * $i) + 0rem) 0rem;
+    }
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 1 through 10{
+            .my-#{$name}-#{$i}{
+                margin: (((1) * $i) + 0rem) 0rem;
+            }
+        }
     }
 }
 
@@ -44,7 +116,24 @@
     margin: auto;
 }
 
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        .mx-#{$name}-auto{
+            margin: auto;
+        }
+    }
+}
+
 .my-auto {
     margin-top: auto !important;
     margin-bottom: auto !important;
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        .my-#{$name}-auto{
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+        }
+    }
 }

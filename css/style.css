@@ -50,6 +50,18 @@ h2 {
   height: 100vh;
 }
 
+@media (min-width: 768px) and (min-height: 576px) and (orientation: landscape) {
+  .home {
+    height: 75vh;
+  }
+}
+
+@media (min-height: 768px) {
+  .home {
+    height: 50vh;
+  }
+}
+
 @media (min-height: 992px) {
   .home {
     height: 40vh;
@@ -72,8 +84,14 @@ h2 {
 
 @media (min-width: 768px) and (min-height: 576px) and (orientation: landscape) {
   .home .home-text {
-    margin-top: 20vh;
+    margin-top: 25vh;
     background-position: 75% 50%;
+  }
+}
+
+@media (min-height: 768px) {
+  .home .home-text {
+    margin-top: 15vh;
   }
 }
 

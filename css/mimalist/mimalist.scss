@@ -4,11 +4,6 @@ html{
     scroll-behavior: smooth;
 }
 
-a, p, h1, h2, h3, h4, .t1, .t2, .t3, .t4, li{
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
 
 .absolute{
     position: absolute;
@@ -50,26 +45,11 @@ a, p, h1, h2, h3, h4, .t1, .t2, .t3, .t4, li{
     display: flex;
 }
 
-.text-center{
-    text-align: center;
-}
-
-.text-left{
-    text-align: left;
-}
-
-.text-right{
-    text-align: right;
-}
-
-.text-justify{
-    text-align: justify;
-}
-
+@import "typography";
 @import "margin";
 @import "padding";
 @import "grid";
-@import "z-index";
+@import "layer";
 
 .container, .container-full{
     width: 100%;
@@ -81,7 +61,21 @@ a, p, h1, h2, h3, h4, .t1, .t2, .t3, .t4, li{
 }
 
 .container{
-    max-width: 1320px;
+    @media(min-width: $sm){
+        max-width: 540px;
+    }
+    @media(min-width: $md){
+        max-width: 720px;
+    }
+    @media(min-width: $lg){
+        max-width: 960px;
+    }
+    @media(min-width: $xl){
+        max-width: 1140px;
+    }
+    @media(min-width: $xxl){
+        max-width: 1320px;
+    }
 }
 
 .border{

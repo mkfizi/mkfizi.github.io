@@ -48,6 +48,14 @@ h2{
 .home{
     height: 100vh;
 
+    @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
+        height: 75vh;
+    }
+
+    @media(min-height: $md){
+        height: 50vh;
+    }
+
     @media(min-height: $lg){
         height: 40vh;
     }
@@ -64,8 +72,12 @@ h2{
         }
 
         @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
-            margin-top: 20vh;
+            margin-top: 25vh;
             background-position: 75% 50%;
+        }
+
+        @media(min-height: $md){            
+            margin-top: 15vh;
         }
 
         @media(min-height: $lg){            
