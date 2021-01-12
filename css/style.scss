@@ -45,43 +45,22 @@ h2{
     font-size: 32px;
 }
 
+a{
+    color: #000000;
+}
+
 .home{
     height: 100vh;
 
+    background: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
     @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
-        height: 75vh;
-    }
-
-    @media(min-height: $md){
-        height: 50vh;
-    }
-
-    @media(min-height: $lg){
-        height: 40vh;
+        background-position: 75% 50%;
     }
 
     .home-text{
-        margin-top: 25vh;
-        height: 320px;
-        background: url("../img/logo.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        
-        @media(orientation: landscape){
-            margin: 0;
-        }
-
-        @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
-            margin-top: 25vh;
-            background-position: 75% 50%;
-        }
-
-        @media(min-height: $md){            
-            margin-top: 15vh;
-        }
-
-        @media(min-height: $lg){            
-            margin-top: 10vh;
-        }
+        height: 100vh;
     }
 }
