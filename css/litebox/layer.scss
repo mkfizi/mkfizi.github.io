@@ -1,4 +1,4 @@
-@for $i from 1 through 100{
+@for $i from 1 through $maxLayer{
     .z-#{$i}00{
         z-index: $i*1#{0}#{0};
     }

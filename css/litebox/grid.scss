@@ -1,7 +1,5 @@
-@import "breakpoint";
-
 .row{
-    display: flex;     
+    display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
@@ -14,41 +12,37 @@
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
   position: relative;
+  box-sizing: border-box;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 15px;
 }
 
-@for $i from 1 through 12{
+
+@each $name, $value in $breakpoints{
+}
+
+@for $i from 1 through $maxCol{
+    $percentage: ((100/$maxCol) * $i) + 0%;
     .col-#{$i}{
-        flex: 0 0 ((100/12) * $i) + 0%;
-        max-width: ((100/12) * $i) + 0%;
+        max-width: calc(#{$percentage} - 32px);
     }
-}
 
-@each $name, $value in $breakpoints{
-    @media(min-width: #{$value}){
-        @for $i from 1 through 12{
-            .col-#{$name}-#{$i}{
-                flex: 0 0 ((100/12) * $i) + 0%;
-                max-width: ((100/12) * $i) + 0%;
-            }
-        }
-    }
-}
-
-@for $i from 1 through 12{
     .offset-#{$i}{
-        margin-left: ((100/12) * $i) + 0%;
+        margin-left: ((100/$maxCol) * $i) + 0%;
     }
 }
 
 
 @each $name, $value in $breakpoints{
     @media(min-width: #{$value}){
-        @for $i from 1 through 12{
+        @for $i from 1 through $maxCol{
+            $percentage: ((100/$maxCol) * $i) + 0%;
+            .col-#{$name}-#{$i}{
+                max-width: calc(#{$percentage} - 32px);
+            }
+
             .offset-#{$name}-#{$i}{
-                margin-left: ((100/12) * $i) + 0%;
+                margin-left: ((100/$maxCol) * $i) + 0%;
             }
         }
     }

@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <!-- Mimalist CSS -->
-    <link rel="stylesheet" href="css/mimalist/mimalist.css" type="text/css">
+    <link rel="stylesheet" href="css/litebox/litebox.css" type="text/css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -34,49 +34,71 @@
     <title>Khafizi Noh</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-lite">
         <section id="home" class="home true-height">
             <div class="row home-text my-auto">
-                <div class="offset-xl-3 col-xl-5 my-auto">
+                <div class="offset-xl-4 col-xl-8 my-auto">
                     <h1>Khafizi Noh</h1>
                     <h2>Full stack web developer based in Cyberjaya, Malaysia.</h2>
                 </div>
             </div>
         </section>
 
-        <section id="project" class="project mb-10" true-height>
-            <div class="row">
-                <div class="offset-xl-2 col-xl-8 text-xl-center">
-                    <div class="title">Projects</div>
+        <section id="project" class="project mb-5" true-height>
+            <div class="title text-xl-center mb-1">Projects</div>
+            <div class="row mt-1">
+                <div class="col-md-6 m-1 p-md-1 border-dotted">
+                    <div class="project-title mb-1">trueHeight.js</div>
+                    <p class="mb-1">Lightweight Javascript framework that sets an element's height to be equivalent to inner browser's height.</p>
+                    <div class="d-flex mb-1">
+                        <a href="https://github.com/mkfizi/true-height.js" target="_blank"><img src="img/github-link.png" class="d-inline-block mr-1" width="30" height="30" alt=""></a>
+                        <a href="https://mkfizi.github.io/trueHeightJS" target="_blank"><img src="img/web-link.png" class="d-inline-block mr-1" width="30" height="30" alt=""></a>
+                    </div>
+                    <br>
+                    <div class="p-absolute d-flex mb-1 p-bottom">
+                        <p><b>Javascript</b></p>
+                    </div>
+                </div>
+                <div class="col-md-6 m-1 p-md-1 border-dotted">
+                    <div class="project-title mb-1">LiteboxCSS</div>
+                    <p class="mb-1">Responsive lightweight CSS framework that aim for the most minimalist class based aproach.</p>
+                    <div class="d-flex mb-1">
+                        <a href="https://github.com/mkfizi/litebox-css" target="_blank"><img src="img/github-link.png" class="d-inline-block mr-1" width="30" height="30" alt=""></a>
+                        <a href="https://mkfizi.github.io/LiteboxCSS" target="_blank"><img src="img/web-link.png" class="d-inline-block mr-1" width="30" height="30" alt=""></a>
+                    </div>
+                    <br>
+                    <div class="p-absolute d-flex mb-1 p-bottom">
+                        <p><b>SCSS</b></p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about mb-10">
+        <section id="about" class="about mb-5">
             <div class="row">
-                <div class="offset-xl-2 col-md-5 col-lg-4 col-xl-3">
-                    <img src="img/avatar.png" class="block mx-auto" width="288" height="288" alt="">
+                <div class="col-xl-4">
+                    <img src="img/avatar.png" class="d-block mx-auto" width="288" height="288" alt="">
                 </div>
-                <div class="col-md-5 col-lg-6 col-xl-5 my-auto">
-                    <div class="title my-1">About</div>
+                <div class="col-xl-8 my-md-auto">
+                    <div class="title mb-1">About</div>
                     <p>I have 4 years of experience in web development, working for startups, organizations, and enterprises to establish their online presence. When I'm not developing, I pour my hours on music and video games. My dream is to travel around the world and see heavens on earth through my own eyes.</p>
                     <br>
                     <p>You can reach me at <a href="mailto:mkfizi93@gmail.com">mkfizi93@gmail.com</a>.</p>
                     <br>
-                    <a href="https://linkedin.com/in/mkfizi" target="_blank"><img src="img/linkedin.png" class="inline-block mr-1" width="42" height="42" alt=""></a>
-                    <a href="https://github.com/mkfizi" target="_blank"><img src="img/github.png" class="inline-block mr-1" width="42" height="42" alt=""></a>
-                    <a href="https://twitter.com/mkfizi" target="_blank"><img src="img/twitter.png" class="inline-block" width="42" height="42" alt=""></a>
+                    <a href="https://linkedin.com/in/mkfizi" target="_blank"><img src="img/linkedin.png" class="d-inline-block mr-1" width="42" height="42" alt=""></a>
+                    <a href="https://github.com/mkfizi" target="_blank"><img src="img/github.png" class="d-inline-block mr-1" width="42" height="42" alt=""></a>
+                    <a href="https://twitter.com/mkfizi" target="_blank"><img src="img/twitter.png" class="d-inline-block" width="42" height="42" alt=""></a>
                 </div>
             </div>
         </section>
     </div>
     
     <footer>
-        <p class="text-center">Copyright © mkfizi. All rights reserved.</p>
+        <p class="text-center"><small>Copyright © mkfizi. All rights reserved.</small></p>
     </footer>
 
     <!-- TrueHeight JS -->
-    <script src="https://cdn.jsdelivr.net/gh/mkfizi/true-height.js/true-height.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mkfizi/true-height.js@1.0.1/true-height.js"></script>
     
     <!-- Custom JS -->
     <script src="js/script.js"></script>

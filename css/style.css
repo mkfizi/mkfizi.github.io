@@ -59,11 +59,17 @@ a {
 
 @media (min-width: 768px) and (min-height: 576px) and (orientation: landscape) {
   .home {
-    background-position: 75% 50%;
+    background-position: left;
   }
 }
 
 .home .home-text {
-  height: 100vh;
+  height: 100%;
+}
+
+.project .project-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
 }
 /*# sourceMappingURL=style.css.map */

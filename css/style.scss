@@ -57,10 +57,18 @@ a{
     background-position: center;
 
     @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {
-        background-position: 75% 50%;
+        background-position: left;
     }
 
     .home-text{
-        height: 100vh;
+        height: 100%;
+    }
+}
+
+.project{
+    .project-title{     
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;   
+        font-size: 24px;
     }
 }

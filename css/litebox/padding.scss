@@ -1,0 +1,69 @@
+@for $i from 0 through $maxSizing{
+    .p-#{$i}{
+        padding: ((1) * $i) + 0rem;
+    }
+    .pt-#{$i}{
+        padding-top: ((1) * $i) + 0rem;
+    }
+    .pb-#{$i}{
+        padding-bottom: ((1) * $i) + 0rem;
+    }
+    .pl-#{$i}{
+        padding-left: ((1) * $i) + 0rem;
+    }
+    .pr-#{$i}{
+        padding-right: ((1) * $i) + 0rem;
+    }
+    .px-#{$i}{
+        padding: 0rem (((1) * $i) + 0rem);
+    }
+    .py-#{$i}{
+        padding: (((1) * $i) + 0rem) 0rem;
+    }
+}
+
+.px-auto{
+    padding: auto;
+}
+
+.py-auto {
+    padding-top: auto !important;
+    padding-bottom: auto !important;
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        @for $i from 0 through $maxSizing{
+            .p-#{$name}-#{$i}{
+                    padding: ((1) * $i) + 0rem;
+            }
+            .pt-#{$name}-#{$i}{
+                padding-top: ((1) * $i) + 0rem;
+            }
+            .pb-#{$name}-#{$i}{
+                padding-bottom: ((1) * $i) + 0rem;
+            }
+            .pl-#{$name}-#{$i}{
+                padding-left: ((1) * $i) + 0rem;
+            }
+            .pr-#{$name}-#{$i}{
+                padding-right: ((1) * $i) + 0rem;
+            }
+            .px-#{$name}-#{$i}{
+                padding: 0rem (((1) * $i) + 0rem);
+            }
+            .py-#{$name}-#{$i}{
+                padding: (((1) * $i) + 0rem) 0rem;
+            }
+        }
+
+        .px-#{$name}-auto{
+            padding: auto;
+        }
+
+        .py-#{$name}-auto{
+            padding-top: auto !important;
+            padding-bottom: auto !important;
+        }
+    }
+}

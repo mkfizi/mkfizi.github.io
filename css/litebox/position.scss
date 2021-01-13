@@ -1,0 +1,59 @@
+.p-static{
+    position: static;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.p-fixed{
+    position: fixed;
+}
+
+.p-absolute{
+    position: absolute;
+}
+
+.p-sticky{
+    position: sticky;
+}
+
+.p-top{
+    top: 0;
+}
+
+.p-right{
+    right: 0;
+}
+
+.p-bottom{
+    bottom: 0;
+}
+
+.p-left{
+    left: 0;
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        .p-#{$name}-static{
+            position: static;
+        }
+
+        .p-#{$name}-relative{
+            position: relative;
+        }
+
+        .p-#{$name}-fixed{
+            position: fixed;
+        }
+
+        .p-#{$name}-absolute{
+            position: absolute;
+        }
+
+        .p-#{$name}-sticky{
+            position: sticky;
+        }
+    }
+}

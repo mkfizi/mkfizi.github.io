@@ -1,0 +1,51 @@
+.d-inline{
+    display: inline;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-grid{
+    display: grid;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-none{
+    display: none;
+}
+
+@each $name, $value in $breakpoints{
+    @media(min-width: #{$value}){
+        .d-#{$name}-inline{
+            display: inline;
+        }
+
+        .d-#{$name}-block{
+            display: block;
+        }
+
+        .d-#{$name}-inline-block{
+            display: inline-block;
+        }
+
+        .d-#{$name}-grid{
+            display: grid;
+        }
+
+        .d-#{$name}-flex{
+            display: flex;
+        }
+
+        .d-#{$name}-none{
+            display: none;
+        }
+    }
+}

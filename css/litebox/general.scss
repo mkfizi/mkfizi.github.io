@@ -1,0 +1,39 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container, .container-lite, .container-full{
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    @media(min-width: $md) and (min-height: $sm) and (orientation: landscape) {    //iphone x and height>lg
+        padding: 0 55px;
+    }
+}
+
+  @each $name, $value in $breakpoints{
+      $strip: strip($value);
+      @media(min-width: #{$value}){
+          .container{
+              max-width: floor($strip - ($strip/15)) + 0px;
+          }
+
+          .container-lite{
+              max-width: floor($strip - ($strip/5)) + 0px;
+          }
+      }
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.border-dotted{
+    border: 1px solid black;
+    border-style: dotted;
+}
