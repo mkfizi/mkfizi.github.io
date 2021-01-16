@@ -1,22 +1,18 @@
-window.onresize = checkWidth;
+trueHeightJS();
+resize();
 
-var innerBrowser = {
-    height:  window.innerHeight,
-    width: window.innerWidth
+window.onresize = resize;
+
+function resize(){
+    var h = window.innerHeight;
+    var w = window.innerWidth;
+    console.log(h+ " "+ w);
+    document.getElementById("height").innerHTML = h +"px";
+    document.getElementById("width").innerHTML = w +"px";
 }
 
-function trueHeightJS(){    
-    innerBrowser.height = window.innerHeight;
-    innerBrowser.width  = window.innerWidth;
-    var setHeight       = innerBrowser.height;
-    var elems           = document.getElementsByClassName("true-height")
-    for(var i = 0; i < elems.length; i++) {
-        elems[i].style.height = setHeight+"px";
-    }
-}
-
-function checkWidth(){
-    if(window.innerWidth != innerBrowser.width){
-        trueHeightJS();
-    }
-}
+var color = "hsl(" + 360 * Math.random() + ',' +
+                                                        (25 + 70 * Math.random()) + '%,' + 
+                                                        (85 + 10 * Math.random()) + '%)';
+document.getElementById("home").style.backgroundColor = color;
+document.getElementById("svg").style.color  = color;                                                       

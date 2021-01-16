@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0"> 
+    <meta name="description" content="Full stack web developer based in Cyberjaya, Malaysia.">
+    
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Mimalist CSS -->
+    <!-- <link rel="stylesheet" href="../liteboxCSS/litebox.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mkfizi/litebox-css/litebox.css" type="text/css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/trueHeightJS.css" type="text/css">
+
+    <title>trueHeightJS</title>
+</head>
+<body>
+    <a href="https://github.com/mkfizi/true-height.js" target="_blank" class="github-corner" aria-label="View source on GitHub">
+        <svg id="svg" width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color: #ffffff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+    <section id="home" class="h-100v home true-height">
+        <div class="container-lite h-100">
+            <div class="row h-100 my-auto text-center">
+                <div class="offset-xl-2 col-xl-8 my-auto">
+                    <h1>trueHeightJS</h1>
+                    <br>
+                    <h2>Set an element's height to be equivalent to inner browser's height.</h2>
+                    <p class="d-none d-xl-block view-desktop"><small>(Rezise browser to see it works)</small></p>
+                    <p class="d-xl-none view-mobile"><small>(Rotate the view to see it works)</small></p>
+                    <br><br><br>
+                    <p>Inner browser's height: <span id="height"></span></p>
+                    <p>Inner browser's width: <span id="width"></span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-lite py-5">
+        <div class="row">
+            <div class="offset-xl-2 col-xl-8">                
+                <div class="title mb-2">What does it do</div>
+                <p>When you set a landing page's height to 100vh, it will stylize the landing page's height to device's screen size without taking the height of inner browser into account. This library will fix that issue so the landing page's height will consistently be set to inner browser's height.</p>
+                <div class="title mt-3 mb-2">Usage</div>
+                <p>Call cdn link to true-height.js before your custom javascript as below:</p>
+                <br>
+                <p class="copy p-1 w-100 mb-2">&lt;script src="https://cdn.jsdelivr.net/gh/mkfizi/true-height.js@1.0.1/true-height.min.js">&lt;/script></p>
+                <p>Add this function call below into your custom javascript file:</p>
+                <br>
+                <p class="copy p-1 w-100 mb-2">&lt;script> trueHeightJS();&lt;/script></p>
+                <p>Add class name "true-height" to your landing page element. Example:</p>
+                <br>
+                <p class="copy p-1 w-100">&lt;div class="true-height">&lt;/div></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text-center"><small>Copyright © <a href="https://mkfizi.github.io/" target="_blank">mkfizi</a>. All rights reserved.</small></p>
+    </footer>
+
+    <!-- TrueHeight JS -->
+    <script src="https://cdn.jsdelivr.net/gh/mkfizi/true-height.js@1.0.1/true-height.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/true-height.js"></script>
+</body>
+</html>
