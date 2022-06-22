@@ -42,7 +42,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.min.css">
     <link rel="preload" as="font">
 
     <!-- 
@@ -52,17 +52,11 @@
         app.js to avoid FOUC should app.js type is defined as a module. 
     -------------------------------------------------------------------------->
     <script>
-        if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-            localStorage.theme = 'light';
-            document.documentElement.classList.remove("dark");
-        } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            localStorage.theme = 'dark';
-            document.documentElement.classList.add("dark")
-        };
+        if(localStorage.theme==="light"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: light)").matches){localStorage.theme="light";document.documentElement.classList.remove("dark")}else if(localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches){localStorage.theme="dark";document.documentElement.classList.add("dark")}
     </script>
 
     <!-- Scripts -->
-    <script src="./src/js/app.js"></script>
+    <script src="./src/js/app.min.js"></script>
 
     <title>Khafizi Noh</title>
 </head>
@@ -154,8 +148,7 @@
 
         <!-- This code below set current year on footer-->
         <script>
-            const footerCurrentYear = document.getElementById("footerCurrentYear");
-            footerCurrentYear.innerHTML = new Date().getFullYear();
+            const footerCurrentYear=document.getElementById("footerCurrentYear");footerCurrentYear.innerHTML=(new Date).getFullYear();
         </script>
     </footer>
 </body>

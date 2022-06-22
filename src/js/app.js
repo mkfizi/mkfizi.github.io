@@ -4,12 +4,7 @@
  * when toggling dark mode.
  */
 const toggleTransitions = () => {
-    let elements = document.querySelectorAll(`.transition, 
-                                            .transition-all, 
-                                            .transition-colors, 
-                                            .transition-opacity, 
-                                            .transition-shadow, 
-                                            .transition-transform`);
+    let elements = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
 
     for (let i = 0; i < elements.length; i++) {
         let element = elements[i];
