@@ -604,14 +604,6 @@ video {
   position: relative;
 }
 
-.right-4 {
-  right: 1rem;
-}
-
-.top-4 {
-  top: 1rem;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -647,16 +639,16 @@ video {
   margin-right: -2rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .ml-4 {
   margin-left: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mt-16 {
@@ -675,16 +667,12 @@ video {
   display: none;
 }
 
-.h-8 {
-  height: 2rem;
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-60 {
   height: 15rem;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .min-h-screen {
@@ -695,16 +683,12 @@ video {
   width: 100%;
 }
 
-.w-8 {
-  width: 2rem;
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-60 {
   width: 15rem;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .max-w-md {
@@ -797,20 +781,12 @@ video {
   fill: #6366f1;
 }
 
-.fill-white {
-  fill: #fff;
-}
-
 .fill-transparent {
   fill: transparent;
 }
 
 .stroke-indigo-500 {
   stroke: #6366f1;
-}
-
-.stroke-white {
-  stroke: #fff;
 }
 
 .p-4 {
@@ -935,6 +911,8 @@ video {
 
   font-weight: 400;
 
+  font-display: swap;
+
   src: url('../fonts/montserrat-v24-latin-regular.eot');
 
   /* IE9 Compat Modes */
@@ -957,6 +935,8 @@ video {
   font-style: normal;
 
   font-weight: 700;
+
+  font-display: swap;
 
   src: url('../fonts/montserrat-v24-latin-700.eot');
 
@@ -984,48 +964,24 @@ body{
   color: rgb(99 102 241 );
 }
 
-.hover\:fill-gray-500:hover {
-  fill: #6b7280;
-}
-
-.hover\:fill-indigo-500:hover {
-  fill: #6366f1;
-}
-
 .hover\:fill-indigo-900:hover {
   fill: #312e81;
-}
-
-.hover\:fill-white:hover {
-  fill: #fff;
 }
 
 .hover\:fill-indigo-300:hover {
   fill: #a5b4fc;
 }
 
-.hover\:stroke-gray-500:hover {
-  stroke: #6b7280;
-}
-
-.hover\:stroke-indigo-500:hover {
-  stroke: #6366f1;
-}
-
-.hover\:stroke-indigo-700:hover {
-  stroke: #4338ca;
-}
-
 .hover\:stroke-indigo-900:hover {
   stroke: #312e81;
 }
 
-.hover\:stroke-white:hover {
-  stroke: #fff;
-}
-
 .hover\:stroke-indigo-300:hover {
   stroke: #a5b4fc;
+}
+
+.hover\:stroke-indigo-700:hover {
+  stroke: #4338ca;
 }
 
 .hover\:text-gray-500:hover {
