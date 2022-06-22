@@ -34,10 +34,22 @@ const toggleDarkMode = () => {
 }
 
 /**
+ *  Toggles navbar. 
+ */
+const navbarToggle = () => {
+    const navbar = document.getElementById("navbar");
+    window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)
+        ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow-md')
+        : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow-md');
+}
+
+/**
  *  Add event listener for dark mode toggle to button and window. This code
  *  executes when window is loaded. 
  */
 window.onload = () => {
     document.getElementById("darkModeToggle").addEventListener("click", () => toggleDarkMode());
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => toggleDarkMode());
+    window.onscroll = () => {navbarToggle()};
+    navbarToggle();
 }
