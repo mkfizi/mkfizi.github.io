@@ -7,7 +7,7 @@
 ## Contact
 
 * [Twitter](https://twitter.com/mkfizi)
-* <mkfizi93@gmail.com>
+* [Email]<mkfizi93@gmail.com>>
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
