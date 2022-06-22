@@ -1,0 +1,20 @@
+{
+	"name": "mkfizi.github.io",
+	"version": "1.0.0",
+	"description": "Portfolio Website",
+	"keywords": [
+		"Portfolio",
+		"Website",
+		"Portfolio Website"
+	],
+	"author": "mkfizi93@gmail.com",
+	"license": "MIT",
+	"scripts": {
+		"tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css",
+		"tailwind-watch": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
+		"tailwind-build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --minify"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.1.3"
+	}
+}
