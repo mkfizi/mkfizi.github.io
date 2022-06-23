@@ -627,6 +627,10 @@ video {
   margin-top: 12rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -639,10 +643,6 @@ video {
   margin-right: -2rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .ml-4 {
   margin-left: 1rem;
 }
@@ -653,6 +653,10 @@ video {
 
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -828,6 +832,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .text-6xl {
