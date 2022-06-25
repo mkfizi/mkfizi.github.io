@@ -34,8 +34,8 @@ const toggleDarkMode = () => {
 const navbarToggle = () => {
     const navbar = document.getElementById("navbar");
     window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)
-        ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow-md')
-        : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow-md');
+        ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow')
+        : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow');
 }
 
 /**
