@@ -1,4 +1,7 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const test = defaultTheme.height
+// console.log(defaultTheme.minHeight)
+console.log(test)
 
 module.exports = {
     mode: 'jit',
@@ -10,11 +13,11 @@ module.exports = {
     theme: {	
         extend: {
             minHeight: {
-                "screen": [defaultTheme.minHeight.screen, "calc(var(--vh, 1vh) * 100)"],
+                "screen": ["100vh", "calc(var(--vh, 1vh) * 100)"],
             },
             height: {
-                "screen": [defaultTheme.height.screen, "calc(var(--vh, 1vh) * 100)"],
-            }
+				"screen": ["100vh", "calc(var(--vh, 1vh) * 100)"],
+            },
         },
     },
     plugins: [],
