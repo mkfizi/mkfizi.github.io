@@ -8,7 +8,7 @@ const app = {
      * 'transition' and 'transition-*' classes to avoid any animations effect
      * when toggling dark mode.
      * 
-     * !!! NOTE: 
+     * NOTE: 
      * For this to work, make sure 'transition-none' is defined after other
      * 'transition' and 'transition-*' classes in CSS output file.
      */
@@ -70,7 +70,7 @@ const app = {
      * Handle viewport issues for mobile browsers.
      * # Refer https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
      */
-    handleViewport: () => {
+     setViewport: () => {
         document.documentElement.style.setProperty("--vh", app.viewportHeight + "px");
     },
 
@@ -88,13 +88,13 @@ const app = {
     initialize: () => {
         window.onload = () => {
             document.getElementById("darkModeToggle").addEventListener("click", () => app.toggleDarkMode());
-            app.handleViewport();
+            app.setViewport();
             app.navbarToggle();
             app.setFooterCurrentYear();
         }
 
         window.onresize = () => {
-            app.handleViewport();
+            app.setViewport();
         }
 
 
