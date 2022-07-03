@@ -1,7 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const test = defaultTheme.height
-// console.log(defaultTheme.minHeight)
-console.log(test)
 
 module.exports = {
     mode: 'jit',

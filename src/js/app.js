@@ -55,6 +55,7 @@ const app = {
         localStorage.theme = "light";
         document.documentElement.classList.remove("dark")
     },
+
     /**
      *  Toggles navbar. 
      */
@@ -64,7 +65,6 @@ const app = {
             ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow')
             : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow');
     },
-    
 
     /**
      * Handle viewport issues for mobile browsers.
