@@ -75,14 +75,6 @@ const app = {
     },
 
     /**
-     * Set footer current year.
-     */
-     setFooterCurrentYear: () => {
-        const element = document.getElementById("footerCurrentYear");
-        element.innerHTML = new Date().getFullYear();
-    },
-
-    /**
      * Initialize apps.
      */
     initialize: () => {
@@ -90,7 +82,6 @@ const app = {
             document.getElementById("darkModeToggle").addEventListener("click", () => app.toggleDarkMode());
             app.setViewport();
             app.navbarToggle();
-            app.setFooterCurrentYear();
         }
 
         window.onresize = () => {
