@@ -1033,6 +1033,14 @@ body{
   color: rgb(165 180 252 / var(--tw-text-opacity));
 }
 
+.dark .dark\:marker\:text-indigo-300 *::marker {
+  color: rgb(165 180 252 );
+}
+
+.dark .dark\:marker\:text-indigo-300::marker {
+  color: rgb(165 180 252 );
+}
+
 .dark .dark\:hover\:stroke-indigo-500:hover {
   stroke: #6366f1;
 }
