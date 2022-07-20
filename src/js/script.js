@@ -1,7 +1,7 @@
 "use strict";
 
-const app = {
-    viewportHeight: window.innerHeight * 0.01,
+// Execute when document DOM is loaded to make sure site contents are rendered.
+window.onload = () => {
 
     /**
      * Add and remove 'transition-none' classes to elements that have any 
@@ -12,87 +12,56 @@ const app = {
      * For this to work, make sure 'transition-none' is defined after other
      * 'transition' and 'transition-*' classes in CSS output file.
      */
-    handleTransition: () => {
+    const toggleTransitionNoneAll = () => {
         let transitions = document.querySelectorAll(".transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform");
     
         for (let i = 0; i < transitions.length; i++) {
             transitions[i].classList.add("transition-none");
             setTimeout(() => { transitions[i].classList.remove("transition-none"); }, 1000);
         }
-    },
-
-    /**
-     * Get theme value from local storage or device's theme settings. 
-     * @return (boolean) - Theme value
-     */
-    getTheme: () => {
-        if (localStorage.theme === "light" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches) return true;
-        if (localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) return false;
-    },
+    }
 
     /**
      * Toggles dark mode. 
      */
-    toggleDarkMode: () => {
-        app.handleTransition();
-        app.getTheme()
-            ? app.enableDarkMode()
-            : app.disableDarkMode();
-    },
+     const toggleDarkMode = () => {
+        toggleTransitionNoneAll();
+        if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add("dark")
+        } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove("dark");
+        };
+    }
     
-    /**
-     * Enable dark mode. 
-     */
-     enableDarkMode: () => {
-        localStorage.theme = "dark";
-        document.documentElement.classList.add("dark");
-    },
-
-    /**
-     * Disable dark mode. 
-     */
-    disableDarkMode: () => {
-        localStorage.theme = "light";
-        document.documentElement.classList.remove("dark")
-    },
-
+    // Set dark mode toggle event listener.
+    let darkModeToggle = document.getElementById("darkModeToggle");
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+    
     /**
      *  Toggles navbar. 
      */
-    navbarToggle: () => {
+    const navbarToggle = () => {
         const navbar = document.getElementById("navbar");
         window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)
             ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow')
             : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow');
-    },
+    }
+
+    // Set navbar toggle event listener.
+    window.addEventListener("scroll", navbarToggle);
 
     /**
      * Handle viewport issues for mobile browsers.
-     * # Refer https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
      */
-     setViewport: () => {
-        document.documentElement.style.setProperty("--vh", app.viewportHeight + "px");
-    },
-
-    /**
-     * Initialize apps.
-     */
-    initialize: () => {
-        window.onload = () => {
-            document.getElementById("darkModeToggle").addEventListener("click", () => app.toggleDarkMode());
-            app.setViewport();
-            app.navbarToggle();
-        }
-
-        window.onresize = () => {
-            app.setViewport();
-        }
-
-
-        window.onscroll = () => {
-            app.navbarToggle()
-        };
+    const setViewport = () => {
+        document.documentElement.style.setProperty("--vh", (window.innerHeight * 0.01) + "px");
     }
-}
 
-app.initialize();
+    // Set viewport fix event listener.
+    window.addEventListener("resize", setViewport);
+
+    // Trigger viewport fix on window load.
+    setViewport();
+}
