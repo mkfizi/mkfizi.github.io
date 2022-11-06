@@ -17,6 +17,10 @@ Types of changes:
 Put unreleased changes here.
 
 
+## [0.1.2] - 2022-11-07
+### Changed
+- Background color in dark mode.
+
 ## [0.1.1] - 2022-07-20
 ### Added
 - Tailboard portfolio.
