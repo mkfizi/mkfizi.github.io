@@ -1,7 +1,7 @@
 "use strict";
 
 // Execute when document DOM is loaded to make sure site contents are rendered.
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", function() {
 
     /**
      * Add and remove 'transition-none' classes to elements that have any 
@@ -64,4 +64,4 @@ window.onload = () => {
 
     // Trigger viewport fix on window load.
     setViewport();
-}
+});
