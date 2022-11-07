@@ -45,8 +45,8 @@ window.onload = () => {
     const navbarToggle = () => {
         const navbar = document.getElementById("navbar");
         window.pageYOffset > (navbar.offsetHeight - navbar.clientHeight)
-            ? navbar.classList.add('bg-white', 'dark:bg-gray-800', 'shadow')
-            : navbar.classList.remove('bg-white', 'dark:bg-gray-800', 'shadow');
+            ? navbar.classList.add('bg-white', 'dark:bg-neutral-800', 'shadow')
+            : navbar.classList.remove('bg-white', 'dark:bg-neutral-800', 'shadow');
     }
 
     // Set navbar toggle event listener.
