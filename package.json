@@ -11,9 +11,9 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css && minify ./src/js/script.js > ./src/js/script.min.js && minify ./src/css/style.css > ./src/css/style.min.css",
-		"tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css",
-		"tailwind-watch": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
-		"tailwind-build": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --minify"
+		"build:prod": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --minify",
+		"watch": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch",
+		"watch:prod": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.min.css --watch --minify"
 	},
 	"devDependencies": {
 		"tailwindcss": "^3.1.3"
