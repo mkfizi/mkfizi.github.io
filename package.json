@@ -1,13 +1,13 @@
 {
 	"name": "mkfizi.github.io",
 	"version": "1.0.0",
-	"description": "Portfolio Website",
+	"description": "mkfizi.dev source code",
 	"keywords": [
 		"Portfolio",
 		"Website",
 		"Portfolio Website"
 	],
-	"author": "mkfizi93@gmail.com",
+	"author": "hi@mkfizi.dev",
 	"license": "MIT",
 	"scripts": {
 		"build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/app.css ",
