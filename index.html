@@ -48,17 +48,13 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./src/css/style.min.css">
+    <link rel="stylesheet" href="./src/css/app.css">
     <link rel="preload" as="font">
 
     <!-- Handle dark mode toggle when the page is loaded -->
     <script>
         if(localStorage.theme==="light"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: light)").matches){localStorage.theme="light";document.documentElement.classList.remove("dark")}else if(localStorage.theme==="dark"||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches){localStorage.theme="dark";document.documentElement.classList.add("dark")}
     </script>
-
-    <!-- Scripts -->
-    <!-- <script src="https://cdn.statically.io/gh/mkfizi/mkfizi.github.io/main/src/js/script.min.js" defer></script> -->
-    <script src="./src/js/script.min.js" defer></script>
 
     <title>Khafizi Noh</title>
 </head>
@@ -194,5 +190,9 @@
             element.innerHTML = new Date().getFullYear();
         </script>
     </footer>
+
+    <!-- Scripts -->
+    <!-- <script src="https://cdn.statically.io/gh/mkfizi/mkfizi.github.io/main/src/js/script.min.js" defer></script> -->
+    <script src="./src/js/app.js" defer></script>
 </body>
 </html>
