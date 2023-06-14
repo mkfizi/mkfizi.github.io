@@ -12,12 +12,6 @@ let app = {
 };
 
 app.elements = {
-    navbar: document.getElementById('navbar'),
-    navbarImage: document.getElementById('navbarImage'),
-    menu: document.getElementById('menu'),
-    menuToggle: document.getElementById('menuToggle'),
-    menuToggleEnable: document.getElementById('menuToggleEnable'),
-    menuToggleDisable: document.getElementById('menuToggleDisable'),
     darkModeToggle: document.getElementById('darkModeToggle'),
     footerCurrentYear: document.getElementById('footerCurrentYear'),
     footerAppName: document.getElementById('footerAppName'),
@@ -36,7 +30,6 @@ app.event = {
     init: () => {
         document.addEventListener('click', app.event.handleClick);
         window.addEventListener('resize', app.view.updateViewportHeight);
-        window.addEventListener('scroll', app.view.updateNavbar);
     },
 
     handleClick: event => {
@@ -44,8 +37,6 @@ app.event = {
 
         if (target.closest('[id="darkModeToggle"]')) {
             app.view.updateDarkMode();
-        } else if (target.closest('[id="menuToggle"]')) {
-            app.view.toggleMenu();
         }
     },
 };
@@ -53,7 +44,6 @@ app.event = {
 app.view = {
     init: () => {
         app.view.updateViewportHeight();
-        app.view.updateNavbar();
         app.view.updateAppInfo();
     },
 
@@ -101,46 +91,10 @@ app.view = {
         if (app.elements.footerAppName) {
             app.elements.footerAppName.innerHTML = app.name;
         }
-    },
-
-    // Toggle the menu visibility and update related elements
-    toggleMenu: () => {
-        if (!app.elements.menu 
-            && !app.elements.menuToggle
-            && !app.elements.menuToggleEnable
-            && !app.elements.menuToggleDisable) return;
-            
-        app.util.toggleTransitionAll(app.elements.menu);
-
-        app.elements.menu.classList.toggle('-translate-y-full', app.config.isMenuActive);
-        app.elements.menuToggleDisable.classList.toggle('hidden', app.config.isMenuActive);
-        app.elements.menuToggleEnable.classList.toggle('hidden', !app.config.isMenuActive);
-        app.util.focusable[app.config.isMenuActive ? 'disable' : 'enable'](app.elements.menu);
-      
-        app.elements.menuToggle.setAttribute('aria-expanded', !app.config.isMenuActive);
-        app.config.isMenuActive = !app.config.isMenuActive;
     }
 };
 
 app.util = {
-    focusable: {
-        selector: `a, button, input, textarea, select, details, [contenteditable="true"]`,
-
-        // Enable focus on the specified element and its focusable child elements
-        enable(element) {
-            for (const focusableElement of element.querySelectorAll(this.selector)) {
-                focusableElement.classList.remove("invisible");
-            }
-        },
-
-        // Disable focus on the specified element and its focusable child elements
-        disable(element) {
-            for (const focusableElement of element.querySelectorAll(this.selector)) {
-                focusableElement.classList.add("invisible");
-            }
-        },
-    },
-
     // Toggle CSS transitions for smoother element transitions
     toggleTransition: () => {
         const transitions = document.querySelectorAll('.transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform');
@@ -150,14 +104,6 @@ app.util = {
                 transition.classList.remove('transition-none');
             }, 100);
         }
-    },
-
-    // Toggle CSS transition on the specified element
-    toggleTransitionAll: (element) => {
-        element.classList.add('transition-all');
-        setTimeout(() => {
-            element.classList.remove('transition-all'); 
-        }, 100);
     }
 };
 
