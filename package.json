@@ -11,11 +11,9 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/app.css ",
-		"watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/app.css --watch",
-		"minify": "npm run build && npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/app.min.css --minify && uglifyjs ./src/js/app.js -o ./src/js/app.min.js"
+		"watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/app.css --watch"
 	},
 	"devDependencies": {
-		"tailwindcss": "^3.3.2",
-		"uglify-js": "^3.17.4"
+		"tailwindcss": "^3.3.2"
 	}
 }
