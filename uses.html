@@ -48,7 +48,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./src/css/app.min.css">
+    <link rel="stylesheet" href="./src/css/app.css">
     <link rel="preload" as="font">
 
     <!-- 
@@ -67,278 +67,156 @@
         };
     </script>
 
-    <title>Khafizi Noh</title>
+    <title>Khafizi Noh | Uses</title>
 </head>
 <body class="relative min-h-screen antialiased bg-white dark:bg-neutral-900">
-    <div class="h-px mt-0"></div>
-    <nav id="navbar" class="sticky top-0 z-20 w-full h-24 transition-all bg-white border-b border-neutral-100 dark:border-neutral-800 lg:h-32 lg:mt-32 dark:bg-neutral-900 lg:border-transparent lg:dark:border-transparent">
-        <div class="relative flex h-full max-w-xl mx-auto">
-            <img id="navbarImage" src="./src/images/mkfizi.png" alt="" class="w-16 h-16 m-4 transition-all rounded-full lg:m-0 lg:w-24 lg:h-24 lg:absolute lg:top-4 lg:-left-28">
-            <div class="flex items-center justify-between w-full h-full">
-                <div class="flex flex-col justify-center transition lg:px-4">
-                    <a href="./" class="inline-block text-2xl font-black text-black dark:text-white">Khafizi Noh</a>
-                    <p class="text-base dark:text-neutral-300 text-neutral-700">Web artisan</p>
-                </div>
-
-                <div class="flex items-center h-full gap-2 pr-4">
-
-                    <!-- Dark mode toggle -->
-                    <button type="button" id="darkModeToggle" aria-label="Dark mode toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition dark:hidden stroke-black fill-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <circle cx="12" cy="12" r="4" />
-                            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 transition stroke-white dark:block fill-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-                        </svg>
-                    </button>
-
-                    <!-- Menu toggle -->
-                    <button type="button" id="menuToggle" class="relative z-30 lg:hidden" aria-controls="menu" aria-expanded="false" aria-label="Toggle menu">
-                        <svg id="menuToggleEnable" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-                        </svg>
-                        <svg id="menuToggleDisable" xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 stroke-black dark:stroke-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M18 6l-12 12" />
-                            <path d="M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+    <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-neutral-100 dark:border-neutral-800 dark:bg-neutral-900">
+        <div class="flex items-center justify-between w-full h-full max-w-xl px-4 mx-auto">
+            <a href="./" class="flex">
+                <span class="relative w-6 h-6 bg-black dark:bg-white before:w-1.5 before:bg-white dark:before:bg-neutral-900 before:h-3 before:absolute before:top-3 before:left-1.5 after:w-1.5 after:bg-white dark:after:bg-neutral-900 after:h-1.5 after:absolute after:bottom-0 after:right-1.5"></span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="./projects" class="inline-block text-base font-semibold text-black dark:text-white">Projects</a>
+                <a href="./uses" class="inline-block text-base font-semibold text-black dark:text-white">Uses</a>
+                <button type="button" id="darkModeToggle" aria-label="Dark mode toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition dark:hidden stroke-black fill-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 transition stroke-white dark:block fill-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
-    <main class="relative flex w-full max-w-xl mx-auto">
-        <aside id="menu" class="bg-white z-10 lg:z-auto dark:bg-neutral-900 w-full left-0 flex fixed lg:flex shrink-0 flex-col h-full top-0 lg:max-h-[calc(100vh-96px)] lg:sticky lg:w-36 pt-24 lg:pt-0 lg:top-24 lg:-ml-36 transition-all -translate-y-full lg:translate-y-0">
-            <div class="w-full h-full overflow-y-auto">
-                <ul class="w-full max-w-xl p-4 mx-auto space-y-4">
-                    <li>
-                        <a href="./" class="invisible text-sm font-bold tracking-wide uppercase transition hover:text-black dark:hover:text-white text-neutral-600 dark:text-neutral-400 lg:visible">About</a>
-                    </li>
-                    <!-- <li>
-                        <a href="./projects" class="invisible text-sm font-bold tracking-wide uppercase transition hover:text-black dark:hover:text-white text-neutral-600 dark:text-neutral-400 lg:visible">Projects</a>
-                    </li> -->
-                    <li>
-                        <a href="./uses" class="invisible text-sm font-bold tracking-wide text-black uppercase dark:text-white lg:visible">Uses</a>
-                    </li>
-                    <!-- <li>
-                        <a href="./contact" class="invisible text-sm font-bold tracking-wide uppercase transition hover:text-black dark:hover:text-white text-neutral-600 dark:text-neutral-400 lg:visible">Contact</a>
-                    </li> -->
-                </ul>
-            </div>
-        </aside>
-        <div class="top-0 flex-grow w-full p-4 mb-8 space-y-8">
-            <p class="text-xl font-bold text-black dark:text-white">Uses</p>
-            <p class="block text-base text-neutral-700 dark:text-neutral-300">This is list of my personal devices and preferred applications that I am currently using for development purposes.</p>
-            <p class="text-base font-bold text-black dark:text-white">Workstation</p>
-            <ul class="ml-4 space-y-8 list-disc marker:text-black dark:marker:text-white">
-                <li class="pl-2 space-y-4">
-                    <a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-m1-8-core-13-2020-specs.html" target="_blank" class="relative font-bold text-black underline dark:text-white">
-                        <span>13" MacBook Air 3.2ghz M1, 16GB RAM, 256GB Storage (2020)</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">Prior to this I was using a mid range custom rig PC that I specifically built for gaming. Over the years my passion for gaming had declined, so I decided to traded my old PC in a favor for a portable machine.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://support.hp.com/gb-en/document/c06474914" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>14" HP ProBook 440 G7 4.9ghz i7-10510U, 20GB RAM, 512GB Storage (2020)</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">This machine is provided by my current employer which I requested for developer specifications. I run Windows and Linux on this machine to develop work related projects.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.displayspecifications.com/en/model/79aa1be8" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>34" Acer Nitro XV340CKP 144hz, 3440x1440 Monitor</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">Switching from 2 monitors setup to an ultrawide monitor greatly improved my productivity. I personally prefered non curved over curved displays generally because of design aesthetic.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.displayspecifications.com/en/model/79aa1be8" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Keychron K8 Gateron Brown Switch Keyboard</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I favor TKL design over full sized keyboard simply because I never have the need to use numeric keypad in my entire life. I choose brown switch due to it's tactile bump but silent travel.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://medium.com/@OFettal/the-best-value-bluetooth-mouse-15-xiaomi-mouse-silent-edition-21e4819079d3" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Xiaomi 1300dpi Dual Mode Wireless Mouse</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I use my trackpad and keyboard shortcuts for travesing a lot more than using a mouse. For some rare occasions, this budget mouse fits the need.</p>
-                </li>
-            </ul>
-            <p class="text-base font-bold text-black dark:text-white">Development</p>
-            <ul class="ml-4 space-y-8 list-disc marker:text-black dark:marker:text-white">
-                <li class="pl-2 space-y-4">
-                    <a href="https://code.visualstudio.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Visual Studio Code</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I have tried various text editors before I settled on this one. It's various plugin extensions, built-in git repository tracking and integrated terminal made me to consider this as the GOAT. I use the default dark theme.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://tableplus.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>TablePlus</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">This is my go-to DBMS for it's intuitive and sleek design. It's cross platform compatibility means I can use across my multiple operating systems.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.docker.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Docker</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">A must have tool for every developer. I never have to use any virtualization just to setup development environment after I started using this.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.postman.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Postman</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">Another must have tool for every developer. This API platform allows me to test and build APIs during development.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://github.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Github</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">This version control platform is where I store all of my codes. I don't know what I would do without it.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <p class="text-base font-bold text-black dark:text-white">Chrome, Safari, Edge, Fire and Opera Web Browsers</p>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I mainly use Chrome for browsing on all my devices. Other browsers are for debugging purposes as different browsers have their respective set of behaviors.</p>
-                </li>
-            </ul>
-            <p class="text-base font-bold text-black dark:text-white">Hosting</p>
-            <ul class="ml-4 space-y-8 list-disc marker:text-black dark:marker:text-white">
-                <li class="pl-2 space-y-4">
-                    <a href="https://digitalocean.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Digital Ocean</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I use this to host most of my main projects. It's scalibility and easy to deploy docker containers makes deployment effortless.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://vercel.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Vercel</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">This is where I host my demo projects. I use this simple because it's free for basic usage.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://pages.github.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Github Pages</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I host most of my static projects on Github Pages including this site. Deployment can be done by simply pushing my code into the repository.</p>
-                </li>
-            </ul>
-            <p class="text-base font-bold text-black dark:text-white">Other Applications</p>
-            <ul class="ml-4 space-y-8 list-disc marker:text-black dark:marker:text-white">
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.figma.com/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Figma</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">Simple design tool that I use for wireframing and prototyping. Sometimes I use this to create logo for my personal projects.</p>
-                </li>
-                <li class="pl-2 space-y-4">
-                    <a href="https://www.notion.so/" target="_blank" class="font-bold text-black underline dark:text-white">
-                        <span>Notion</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 mr-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
-                            <path d="M11 13l9 -9" />
-                            <path d="M15 4h5v5" />
-                        </svg>
-                    </a>
-                    <p class="text-base text-neutral-700 dark:text-neutral-300">I put every notes and planning my next steps in this great note taking application. I installed application this on all my devices.</p>
-                </li>
-            </ul>
-        </div>
-    </main>
-    <!-- Footer -->
-    <footer class="absolute bottom-0 w-full pb-px text-center">
-        <p class="text-sm text-gray-900 dark:text-white"><span id="footerAppName"></span> © <span id="footerCurrentYear"></span></p>
-    </footer>
+    <main class="w-full max-w-xl px-4 pt-8 pb-12 mx-auto">
+        <p class="mt-8 mb-4 text-2xl font-extrabold text-black dark:text-white">Uses</p>
+        <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">This is list of my personal devices and preferred applications and services that I am currently using for development purposes.</p>
+        
+        <p class="mt-8 mb-4 text-lg font-extrabold text-black dark:text-white">Workstation</p>
+        <ul class="ml-4 list-disc marker:text-neutral-700 dark:marker:text-neutral-300">
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-m1-8-core-13-2020-specs.html" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>13" MacBook Air 3.2ghz M1, 16GB RAM, 256GB Storage (2020)</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">Prior to this I was using a custom PC that I specifically built for gaming. Over the years my passion for gaming had declined, so I decided to trade my PC in a favor for a portable machine.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://support.hp.com/gb-en/document/c06474914" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>14" HP ProBook 440 G7 4.9ghz i7-10510U, 20GB RAM, 512GB Storage (2020)</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">This machine is provided by my current employer which I requested for developer specifications. I run Windows and Linux on this machine to develop work related projects.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.displayspecifications.com/en/model/79aa1be8" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>34" Acer Nitro XV340CKP 144hz, 3440x1440 Monitor</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">Switching from 2 monitors setup to an ultrawide monitor has greatly improved my productivity. I personally prefered non curved over curved displays generally because of design aesthetic.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.displayspecifications.com/en/model/79aa1be8" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Keychron K8 Gateron Brown Switch Keyboard</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I favor TKL design over full sized keyboard simply because I never have the need to use numeric keypad in my entire life. I choose brown switch due to its tactile bump but silent travel.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://medium.com/@OFettal/the-best-value-bluetooth-mouse-15-xiaomi-mouse-silent-edition-21e4819079d3" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Xiaomi 1300dpi Dual Mode Wireless Mouse</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I use my trackpad and keyboard shortcuts for travesing a lot more simply because its faster. On some rare occasions when I am using a mouse, this budget mouse fits the need.</p>
+            </li>
+        </ul>
+        
+        <p class="mt-8 mb-4 text-lg font-extrabold text-black dark:text-white">Development Tools</p>
+        <ul class="ml-4 list-disc marker:text-neutral-700 dark:marker:text-neutral-300">
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://code.visualstudio.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Visual Studio Code</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I consider this as the GOAT fot its various plugin extensions, built-in git repository tracking and integrated terminal. Presonally I prefer the default dark theme.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://tableplus.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>TablePlus</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">My go-to DBMS when managing database for its intuitive and sleek design. Its cross-platform compatibility ensures seamless usage across multiple operating systems.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.docker.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Docker</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">A must have tool for every developer. This platform eliminated my need for complex virtualization, simplifying the process of setting up my development environment.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.postman.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Postman</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">Another must have tool for every developer. This API platform allows me to efficiently build and test APIs during development, streamlining the creation process and enhancing productivity.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://github.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Github</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">This version control platform is where I store all of my source codes, ensuring version history is tracked and safeguarded. I don't know what I would do without it.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="./" class="inline-block text-base font-bold text-black underline dark:text-white">Chrome, Safari, Edge, Fire and Opera Web Browsers</a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I mainly use Chrome for browsing on all my devices. Other browsers are for debugging purposes as different browsers have their respective set of behaviors.</p>
+            </li>
+        </ul>
 
-    <!-- Scripts -->
-    <script src="./src/js/app.min.js" defer></script>
+        <p class="mt-8 mb-4 text-lg font-extrabold text-black dark:text-white">Hosting Services</p>
+        <ul class="ml-4 list-disc marker:text-neutral-700 dark:marker:text-neutral-300">
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://digitalocean.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Digital Ocean</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">This is my chosen platform for deploying the majority of my core projects. Its scalability and containerization abilities makes deployment to be effortless. </p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://vercel.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Vercel</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">This is my preferred hosting platform show project demonstration. Its seamless deployment process and most importantly free tier perfectly suits all my requirements.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://pages.github.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Github Pages</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I host most of my static projects on Github Pages including this site. Deployment can be done by simply pushing my code into the repository.</p>
+            </li>
+        </ul>
+
+        <p class="mt-8 mb-4 text-lg font-extrabold text-black dark:text-white">Notable Applications</p>
+        <ul class="ml-4 list-disc marker:text-neutral-700 dark:marker:text-neutral-300">
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.figma.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Figma</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">Simple but exceptional design tool that I rely on for wireframing, prototyping, and even logo creation. Its user-friendly interface and intuitive features make it easy to bring my design ideas to life.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://www.notion.so/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Notion</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">Note-taking application that I rely on for organizing my thoughts, planning my next steps, and keeping track of important information. I installed application accross all my devices.</p>
+            </li>
+            <li class="pl-4">
+                <div class="my-4">
+                    <a href="https://spotify.com/" target="_blank" class="inline text-base font-bold text-black underline dark:text-white"><span>Spotify</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                </div>
+                <p class="my-4 text-base text-neutral-700 dark:text-neutral-300">I code better algorithms while listening to music. I find that listening to synthwave, lofi, and trance genres creates the perfect ambiance for programming.</p>
+            </li>
+        </ul>
+    </main>
+    <footer class="absolute bottom-0 w-full pb-px text-center">
+        <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footerAppName"></span> © <span id="footerCurrentYear"></span></p>
+    </footer>
+    <script src="./src/js/app.js" defer></script>
 </body>
 </html>
