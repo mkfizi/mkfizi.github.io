@@ -908,8 +908,16 @@ video {
   color: rgb(64 64 64 );
 }
 
+.marker\:text-black *::marker {
+  color: rgb(0 0 0 );
+}
+
 .marker\:text-neutral-700::marker {
   color: rgb(64 64 64 );
+}
+
+.marker\:text-black::marker {
+  color: rgb(0 0 0 );
 }
 
 .before\:absolute::before {
@@ -1046,8 +1054,16 @@ video {
   color: rgb(212 212 212 );
 }
 
+:is(.dark .dark\:marker\:text-white *)::marker {
+  color: rgb(255 255 255 );
+}
+
 :is(.dark .dark\:marker\:text-neutral-300)::marker {
   color: rgb(212 212 212 );
+}
+
+:is(.dark .dark\:marker\:text-white)::marker {
+  color: rgb(255 255 255 );
 }
 
 :is(.dark .dark\:before\:bg-neutral-900)::before {
