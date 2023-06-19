@@ -26,6 +26,10 @@ Put unreleased changes here.
 - New mkfizi logo and favicon images.
 - Rewrite `app.js` into a more structured content.
 
+### Removed
+- `browserconfig.xml` file and tile images.
+- `humans.txt` file.
+
 ## [0.1.2] - 2022-11-07
 ### Changed
 - Background color in dark mode.
