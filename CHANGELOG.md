@@ -17,6 +17,13 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.0.0] - 2023-06-28
+### Added
+- Style guideline page.
+
+### Changed
+- Revise all pages layout to follow new style guideline.
+
 ## [1.0.0] - 2023-06-16
 ### Added
 - Project and Uses page.
