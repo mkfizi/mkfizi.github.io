@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./src/css/app.css">
+    <link rel="preload" as="font">
+
+    <!-- Scripts -->
+    <script src="./src/js/app.js" defer></script>
+
+    <!-- 
+        Handle dark mode toggle when the page is loaded.
+
+        These codes below are called here instead of being inside app.js 
+        to avoid FOUC should app.js type is defined as a module. 
+    -------------------------------------------------------------------------->
+    <script>
+        if (localStorage.theme === "light" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove("dark");
+        } else if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add("dark")
+        };
+    </script>
+
+    <title>Style Guideline</title>
+</head>
+<body class="relative min-h-screen antialiased bg-white dark:bg-neutral-900">
+    <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900">
+        <div class="flex items-center justify-between w-full h-full max-w-xl px-4 mx-auto sm:px-8">
+            <a href="./" class="flex">
+                <span class="relative w-6 h-6 bg-black dark:bg-white before:w-1.5 before:bg-white dark:before:bg-neutral-900 before:h-3 before:absolute before:top-3 before:left-1.5 after:w-1.5 after:bg-white dark:after:bg-neutral-900 after:h-1.5 after:absolute after:bottom-0 after:right-1.5"></span>
+            </a>
+            <button type="button" id="darkModeToggle" aria-label="Dark mode toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:hidden stroke-black fill-black" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="hidden w-6 h-6 stroke-white dark:block fill-white" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-xl px-4 py-16 mx-auto sm:px-8">
+        <div class="space-y-8">
+            <p class="text-lg font-extrabold text-black sm:text-xl lg:text-2xl dark:text-white">Style Guideline</p>
+            <div class="space-y-4">
+                <p class="text-base font-extrabold text-black dark:text-white">Typography</p>    
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Paragraph</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <p class="text-base text-neutral-700 dark:text-neutral-300">This is a text sentence.</p>
+                    </div>
+                </div>  
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Titles</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <p class="text-2xl font-black text-black sm:text-3xl lg:text-4xl dark:text-white">Large title</p>
+                        <p class="text-lg font-extrabold text-black sm:text-xl lg:text-2xl dark:text-white">Medium title</p>
+                        <p class="text-base font-extrabold text-black dark:text-white">Small title.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Links</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <div>
+                            <a href="https://laravel.com/" class="text-base font-bold text-black underline dark:text-white"><span>Internal Link</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 ml-px" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg></a>
+                        </div>
+                        <div>
+                            <a href="https://laravel.com/" target="_blank" class="text-base font-bold text-black underline dark:text-white"><span>External Link</span><svg xmlns="http://www.w3.org/2000/svg" class="inline w-4 h-4 mb-1 ml-px" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">List</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <ul class="ml-4 space-y-4 list-disc marker:text-neutral-700 dark:marker:text-neutral-300">
+                            <li class="pl-2">
+                                <p class="text-base text-neutral-700 dark:text-neutral-300">Item one.</p>
+                            </li>
+                            <li class="pl-2">
+                                <p class="text-base text-neutral-700 dark:text-neutral-300">Item two.</p>
+                            </li>
+                            <li class="pl-2">
+                                <p class="text-base text-neutral-700 dark:text-neutral-300">Item three.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <p class="text-base font-extrabold text-black dark:text-white">UI Elements</p>
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Navbar Links</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <div>
+                            <a href="#" class="text-base font-semibold text-black dark:text-white">Active</a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-base font-semibold text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white">Inactive</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Badge</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <div>
+                            <span class="px-2 py-1 text-sm font-semibold text-black rounded-md dark:text-white bg-neutral-200 dark:bg-neutral-600">Badge Text</span>
+                        </div>
+                    </div>
+                </div>  
+                <div class="grid grid-cols-3 sm:grid-cols-4">
+                    <p class="text-base text-neutral-700 dark:text-neutral-300">Button</p>
+                    <div class="col-span-2 space-y-4 sm:col-span-3">
+                        <div>
+                            <a href="#" class="px-8 py-2 text-base font-semibold text-white bg-black border border-black rounded-md hover:border-neutral-700 hover:bg-neutral-700 dark:bg-neutral-700 dark:border-neutral-700 dark:hover:border-neutral-600 dark:hover:bg-neutral-600">Link Button</a>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </main>
+    <footer class="absolute bottom-0 w-full pb-px text-center">
+        <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footerAppName"></span> © <span id="footerCurrentYear"></span></p>
+    </footer>
+</body>
+</html>
