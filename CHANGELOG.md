@@ -17,7 +17,7 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.0.0] - 2023-06-28
+## [1.1.0] - 2023-06-28
 ### Added
 - Style guideline page.
 
