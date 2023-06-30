@@ -666,6 +666,10 @@ video {
   width: 1px;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-screen-sm {
   max-width: 640px;
 }
