@@ -12,9 +12,9 @@ let app = {
 };
 
 app.elements = {
-    darkModeToggle: document.getElementById('darkModeToggle'),
-    footerCurrentYear: document.getElementById('footerCurrentYear'),
-    footerAppName: document.getElementById('footerAppName'),
+    darkModeToggle: document.getElementById('dark-mode-toggle'),
+    footerCurrentYear: document.getElementById('footer-current-year'),
+    footerAppName: document.getElementById('footer-app-name'),
 };
 
 app.config = {
@@ -35,7 +35,7 @@ app.event = {
     handleClick: event => {
         const target = event.target;
 
-        if (target.closest('[id="darkModeToggle"]')) {
+        if (target.closest('[id="dark-mode-toggle"]')) {
             app.view.updateDarkMode();
         }
     },
