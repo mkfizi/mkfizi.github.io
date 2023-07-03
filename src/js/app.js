@@ -57,7 +57,7 @@ app.view = {
     },
 
     // Toogle dark mode based on value in 'localStorage.theme'
-    toogleDarkMode: () => {
+    toggleDarkMode: () => {
         app.util.toggleTransition();
 
         const isLightMode = localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches);
