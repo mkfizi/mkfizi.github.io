@@ -56,7 +56,7 @@ app.view = {
         document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
     },
 
-    // toogle dark mode based on value in 'localStorage.theme'
+    // Toogle dark mode based on value in 'localStorage.theme'
     toogleDarkMode: () => {
         app.util.toggleTransition();
 
@@ -65,7 +65,7 @@ app.view = {
         document.documentElement.classList.toggle('dark', isLightMode);
     },
 
-    // toogle footer data for year and app name
+    // Toogle footer data for year and app name
     toggleFooterData: () => {
         if (app.elements.footerYear) {
             app.elements.footerYear.innerHTML = new Date().getFullYear();
