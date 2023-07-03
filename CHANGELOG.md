@@ -17,7 +17,16 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.2.0] - 2023-07-03
+### Changed
+- Rename `app.js` functions for more conventional standard.
+
+### Removed
+- Toggle navbar appearance in `app.js`.
+- `projects.html` page
+
 ## [1.1.0] - 2023-06-28
+
 ### Added
 - Style guideline page.
 
