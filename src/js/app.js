@@ -28,49 +28,36 @@ app.init = () => {
 
 app.event = {
     init: () => {
-        document.addEventListener('click', app.event.handleClick);
-        window.addEventListener('resize', app.view.updateViewportHeight);
+        document.addEventListener('click', app.event.handleDocumentClick);
+        window.addEventListener('resize', app.event.handleWindowResize);
     },
 
-    handleClick: event => {
+    handleDocumentClick: event => {
         const target = event.target;
 
         if (target.closest('[id="dark-mode-toggle"]')) {
-            app.view.updateDarkMode();
+            app.view.toggleDarkMode();
         }
     },
+
+    handleWindowResize: event => {
+        app.view.toggleViewportHeight();
+    }
 };
 
 app.view = {
     init: () => {
-        app.view.updateViewportHeight();
-        app.view.updateAppInfo();
+        app.view.toggleViewportHeight();
+        app.view.toggleFooterData();
     },
 
     // Update the height of the viewport. This is a workaround fix for [viewport height issue on mobile browsers](https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser) 
-    updateViewportHeight: () => {
+    toggleViewportHeight: () => {
         document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
     },
 
-    // Update navbar appearance based on window scroll position
-    updateNavbar: () => {
-        if (!app.elements.navbar && !app.elements.navbarContent) return;
-
-        const isNavbarScrolled = window.pageYOffset > app.elements.navbar.offsetHeight;
-
-        app.elements.navbar.classList.toggle('lg:h-32', !isNavbarScrolled);
-        app.elements.navbar.classList.toggle('lg:border-transparent', !isNavbarScrolled);
-        app.elements.navbar.classList.toggle('lg:dark:border-transparent', !isNavbarScrolled);
-        app.elements.navbar.classList.toggle('lg:border-neutral-100', isNavbarScrolled);
-        app.elements.navbar.classList.toggle('lg:dark:border-neutral-800', isNavbarScrolled);
-        app.elements.navbarImage.classList.toggle('lg:w-24', !isNavbarScrolled);
-        app.elements.navbarImage.classList.toggle('lg:h-24', !isNavbarScrolled);
-        app.elements.navbarImage.classList.toggle('lg:-left-28', !isNavbarScrolled);
-        app.elements.navbarImage.classList.toggle('lg:-left-20', isNavbarScrolled);
-    },
-
-    // Update dark mode based on value in 'localStorage.theme'
-    updateDarkMode: () => {
+    // toogle dark mode based on value in 'localStorage.theme'
+    toogleDarkMode: () => {
         app.util.toggleTransition();
 
         const isLightMode = localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches);
@@ -78,8 +65,8 @@ app.view = {
         document.documentElement.classList.toggle('dark', isLightMode);
     },
 
-    // Update the footer with year and app name
-    updateAppInfo: () => {
+    // toogle footer data for year and app name
+    toggleFooterData: () => {
         if (app.elements.footerYear) {
             app.elements.footerYear.innerHTML = new Date().getFullYear();
         }
