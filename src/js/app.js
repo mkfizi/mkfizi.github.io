@@ -13,7 +13,7 @@ let app = {
 
 app.elements = {
     darkModeToggle: document.getElementById('dark-mode-toggle'),
-    footerCurrentYear: document.getElementById('footer-current-year'),
+    footerYear: document.getElementById('footer-year'),
     footerAppName: document.getElementById('footer-app-name'),
 };
 
@@ -78,10 +78,10 @@ app.view = {
         document.documentElement.classList.toggle('dark', isLightMode);
     },
 
-    // Update the footer with current year, app name, and version
+    // Update the footer with year and app name
     updateAppInfo: () => {
-        if (app.elements.footerCurrentYear) {
-            app.elements.footerCurrentYear.innerHTML = new Date().getFullYear();
+        if (app.elements.footerYear) {
+            app.elements.footerYear.innerHTML = new Date().getFullYear();
         }
 
         if (app.elements.footerAppName) {
