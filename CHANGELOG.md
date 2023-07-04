@@ -17,13 +17,15 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.2.0] - 2023-07-03
+## [1.2.0] - 2023-07-04
 ### Changed
 - Rename `app.js` functions for more conventional standards.
+- Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
+- Add `[rel=preload]` to `app.css` and `app.js`.
 
 ### Removed
 - Toggle navbar appearance in `app.js`.
-- `projects.html` page
+- `projects.html` page.
 
 ## [1.1.0] - 2023-06-28
 
