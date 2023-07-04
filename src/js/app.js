@@ -17,10 +17,6 @@ app.elements = {
     footerAppName: document.getElementById('footer-app-name'),
 };
 
-app.config = {
-    isMenuActive: false
-}
-
 app.init = () => {
     app.view.init();
     app.event.init();
