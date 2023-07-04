@@ -40,7 +40,7 @@ app.event = {
         }
     },
 
-    handleWindowResize: event => {
+    handleWindowResize: () => {
         app.view.footer.toggle();
     }
 };
