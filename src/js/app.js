@@ -37,7 +37,7 @@ app.event = {
     },
 
     handleWindowResize: () => {
-        app.view.footer.toggle();
+        app.view.viewportHeight.toggle();
     }
 };
 
