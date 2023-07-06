@@ -17,14 +17,13 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.2.0] - 2023-07-05
+## [1.2.0] - 2023-07-06
 ### Added
 - Asset `[rel=preload]` on `app.css` and `app.js`.
 
 ### Changed
 - Restructure `app.js` functions for more conventional standards.
 - Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
-- Changed navbar from `fixed` to `sticky`.
 
 ### Removed
 - Toggle navbar appearance in `app.js`.
