@@ -24,6 +24,7 @@ Put unreleased changes here.
 ### Changed
 - Restructure `app.js` functions for more conventional standards.
 - Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
+- Changed navbar from `fixed` to `sticky`.
 
 ### Removed
 - Toggle navbar appearance in `app.js`.
