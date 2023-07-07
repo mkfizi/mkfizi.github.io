@@ -17,12 +17,12 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.2.0] - 2023-07-06
+## [1.2.0] - 2023-07-08
 ### Added
 - Asset `[rel=preload]` on `app.css` and `app.js`.
 
 ### Changed
-- Restructure `app.js` functions for more conventional standards.
+- Restructure `app.js` functions to include IIFE for more conventional standards.
 - Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
 - Changed navbar from `fixed` to `sticky`.
 
