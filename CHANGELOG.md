@@ -17,7 +17,7 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.2.0] - 2023-07-08
+## [1.2.0] - 2023-07-10
 ### Added
 - Asset `[rel=preload]` on `app.css` and `app.js`.
 
