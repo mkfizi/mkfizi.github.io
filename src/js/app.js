@@ -20,8 +20,7 @@
             node: {
                 footer: {
                     year: document.getElementById('footer-year'),
-                    appName: document.getElementById('footer-app-name'),
-                    appVersion: document.getElementById('footer-app-version'),
+                    appName: document.getElementById('footer-app-name')
                 }
             }
         },
@@ -49,6 +48,8 @@
         },
 
         views: {
+            // Workaround fix to handle viewport height issue on mobile browsers
+            // https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser
             viewportHeight: {
                 toggle: () => {
                     document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
@@ -56,8 +57,16 @@
             },
 
             darkMode: {
+                // Toggle dark mode
                 toggle: () => {
-                    app.utils.transition.toggle();
+                    // Toggle transition classes to prevent FOUC
+                    const transitions = document.querySelectorAll('.transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform');
+                    for (const transition of transitions) {
+                        transition.classList.add('transition-none');
+                        setTimeout(() => {
+                            transition.classList.remove('transition-none');
+                        }, 100);
+                    }
         
                     const isDarkMode = localStorage.theme === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches);
                     localStorage.theme = isDarkMode ? 'dark' : 'light';
@@ -66,6 +75,7 @@
             },
 
             footer: {
+                // Update footer information
                 toggle: () => {
                     if (app.elements.node.footer.year) {
                         app.elements.node.footer.year.innerHTML = new Date().getFullYear();
@@ -74,29 +84,12 @@
                     if (app.elements.node.footer.appName) {
                         app.elements.node.footer.appName.innerHTML = app.name;
                     }
-                    if (app.elements.node.footer.appVersion) {
-                        app.elements.node.footer.appVersion.innerHTML = app.version;
-                    }
                 }
             },
 
             init: () => {
                 app.views.viewportHeight.toggle();
                 app.views.footer.toggle();
-            }
-        },
-
-        utils: {
-            transition: {
-                toggle: () => {
-                    const transitions = document.querySelectorAll('.transition, .transition-all, .transition-colors, .transition-opacity, .transition-shadow, .transition-transform');
-                    for (const transition of transitions) {
-                        transition.classList.add('transition-none');
-                        setTimeout(() => {
-                            transition.classList.remove('transition-none');
-                        }, 100);
-                    }
-                }
             }
         },
 
