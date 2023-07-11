@@ -11,12 +11,14 @@
     const app = {
         name: 'Khafizi Noh',
         version:'1.2.0',
+        
         elements: {
             id: {
                 darkMode: {
                     toggle: 'dark-mode-toggle'
                 }
             },
+            
             node: {
                 footer: {
                     year: document.getElementById('footer-year'),
