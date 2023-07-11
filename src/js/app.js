@@ -22,7 +22,7 @@
             node: {
                 footer: {
                     year: document.getElementById('footer-year'),
-                    appName: document.getElementById('footer-app-name')
+                    appName: document.getElementById('footer-appname')
                 }
             }
         },
