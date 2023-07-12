@@ -17,17 +17,18 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
-## [1.2.0] - 2023-07-10
+## [1.2.0] - 2023-07-12
 ### Added
 - Asset `[rel=preload]` on `app.css` and `app.js`.
 
 ### Changed
-- Restructure `app.js` functions to include IIFE for more conventional standards.
 - Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
 - Changed navbar from `fixed` to `sticky`.
+- Adapt `app.js` to use IIFE for more conventional standards.
+- Rewrite `app` object for more structured content.
 
 ### Removed
-- Toggle navbar appearance in `app.js`.
+- Remove unnecessary toogle all transition function since there's no transition classes
 - `projects.html` page.
 
 ## [1.1.0] - 2023-06-28
