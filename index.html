@@ -74,7 +74,7 @@
     <title>Khafizi Noh</title>
 </head>
 <body class="relative min-h-screen antialiased bg-white dark:bg-neutral-900">
-    <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900">
+    <nav id="navbar" class="sticky top-0 z-10 w-full h-16 bg-white border-b border-transparent dark:bg-neutral-900 dark:border-transparent">
         <div class="flex items-center justify-between w-full h-full max-w-screen-sm px-4 mx-auto sm:px-8">
             <a href="./" class="flex">
                 <span class="relative w-6 h-6 bg-black dark:bg-white before:w-1.5 before:bg-white dark:before:bg-neutral-900 before:h-3 before:absolute before:top-3 before:left-1.5 after:w-1.5 after:bg-white dark:after:bg-neutral-900 after:h-1.5 after:absolute after:bottom-0 after:right-1.5"></span>
@@ -82,7 +82,7 @@
             <div class="flex items-center gap-8">
                 <a href="./uses" class="text-base font-semibold text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white">Uses</a>
                 <div class="hidden w-px h-8 sm:block bg-neutral-300 dark:bg-neutral-700"></div>
-                <button type="button" id="darkmode-toggle" aria-label="Toggle dark mode" class="group">
+                <button type="button" id="dark-mode-toggle" aria-label="Toggle dark mode" class="group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:hidden stroke-neutral-600 group-hover:stroke-black" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
@@ -146,7 +146,7 @@
         </div>
     </main>
     <footer class="absolute bottom-0 w-full pb-px text-center">
-        <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footer-appname"></span> © <span id="footer-year"></span></p>
+        <p class="text-sm text-neutral-700 dark:text-neutral-300"><span id="footer-app-name"></span> © <span id="footer-year"></span></p>
     </footer>
 </body>
 </html>
