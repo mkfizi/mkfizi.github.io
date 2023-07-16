@@ -522,10 +522,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .static {
   position: static;
 }
@@ -653,14 +649,6 @@ video {
   max-width: 640px;
 }
 
-.max-w-screen-xl {
-  max-width: 1280px;
-}
-
-.max-w-screen-md {
-  max-width: 768px;
-}
-
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -780,12 +768,20 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
 .pb-px {
   padding-bottom: 1px;
 }
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-center {
@@ -851,24 +847,6 @@ video {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-none {
-  transition-property: none;
-}
-
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .marker\:text-neutral-700 *::marker {
@@ -1111,6 +1089,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
