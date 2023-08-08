@@ -19,7 +19,7 @@
         footerCurrentYear: document.getElementById('footer-year'),
         footerAppName: document.getElementById('footer-app-name'),
     }
-    
+
     app.view = {
         viewportHeight: {
             // Workaround fix to handle viewport height issue on mobile browsers
@@ -58,8 +58,8 @@
                 if (app.element.navbar) {
                     const isScrolled = window.scrollY > (app.element.navbar.offsetHeight - app.element.navbar.clientHeight);
 
-                    app.element.navbar.classList[isScrolled? 'add' : 'remove']('border-neutral-200', 'dark:border-neutral-800');
-                    app.element.navbar.classList[isScrolled? 'remove' : 'add']('border-transparent', 'dark:border-transparent');
+                    app.element.navbar.classList[isScrolled ? 'add' : 'remove']('border-neutral-200', 'dark:border-neutral-800');
+                    app.element.navbar.classList[isScrolled ? 'remove' : 'add']('border-transparent', 'dark:border-transparent');
                 }
             }
         },
@@ -92,7 +92,7 @@
             resize: () => {
                 app.view.viewportHeight.toggle();
             },
-            
+
             // Handle window 'scroll' event
             scroll: () => {
                 app.view.navbar.toggle();
