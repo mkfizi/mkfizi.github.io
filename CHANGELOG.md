@@ -17,6 +17,11 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.2.1] - 2023-08-30
+### Changed
+- Revise content padding size.
+- Revise footer appearance.
+
 ## [1.2.0] - 2023-07-12
 ### Added
 - Asset `[rel=preload]` on `app.css` and `app.js`.
@@ -32,7 +37,6 @@ Put unreleased changes here.
 - `projects.html` page.
 
 ## [1.1.0] - 2023-06-28
-
 ### Added
 - Style guideline page.
 
