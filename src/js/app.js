@@ -11,7 +11,6 @@
     const app = {};
 
     app.name = 'Khafizi Noh';
-    app.breakpointSize = 1024;
 
     app.element = {
         navbar: document.getElementById('navbar'),
