@@ -27,7 +27,6 @@ Put unreleased changes here.
 - Asset `[rel=preload]` on `app.css` and `app.js`.
 
 ### Changed
-- Revise content style to follow global [style guideline](https://github.com/mkfizi/style-guideline).
 - Changed navbar from `fixed` to `sticky`.
 - Adapt `app.js` to use IIFE for more conventional standards.
 - Rewrite `app` object for more structured content.
