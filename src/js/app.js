@@ -29,20 +29,18 @@
             }
         },
 
-        footer: {
+        navbar: {
 
-            // Initialize footer content with current year, app name and version
-            init: () => {
-                if (app.element.footerCurrentYear) {
-                    app.element.footerCurrentYear.innerHTML = new Date().getFullYear();
-                }
+            // Toggle navbar appearance based on window scroll Y position
+            toggle: () => {
+                if (app.element.navbar) {
+                    const isScrolled = window.scrollY > (app.element.navbar.offsetHeight - app.element.navbar.clientHeight);
 
-                if (app.element.footerAppName) {
-                    app.element.footerAppName.innerHTML = app.name;
+                    app.element.navbar.classList[isScrolled ? 'add' : 'remove']('border-neutral-200', 'dark:border-neutral-800');
+                    app.element.navbar.classList[isScrolled ? 'remove' : 'add']('border-transparent', 'dark:border-transparent');
                 }
             }
         },
-
 
         darkMode: {
 
@@ -54,15 +52,16 @@
             }
         },
 
-        navbar: {
+        footer: {
 
-            // Toggle navbar appearance based on window scroll Y position
-            toggle: () => {
-                if (app.element.navbar) {
-                    const isScrolled = window.scrollY > (app.element.navbar.offsetHeight - app.element.navbar.clientHeight);
+            // Initialize footer content with current year, app name and version
+            init: () => {
+                if (app.element.footerCurrentYear) {
+                    app.element.footerCurrentYear.innerHTML = new Date().getFullYear();
+                }
 
-                    app.element.navbar.classList[isScrolled ? 'add' : 'remove']('border-neutral-200', 'dark:border-neutral-800');
-                    app.element.navbar.classList[isScrolled ? 'remove' : 'add']('border-transparent', 'dark:border-transparent');
+                if (app.element.footerAppName) {
+                    app.element.footerAppName.innerHTML = app.name;
                 }
             }
         },
