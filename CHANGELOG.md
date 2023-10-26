@@ -17,6 +17,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.2.2] - 2023-10-26
+### Changed
+- Remove `404.html` page dependencies.
+
 ## [1.2.1] - 2023-08-30
 ### Changed
 - Revise content padding size.
