@@ -17,6 +17,10 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.2.3] - 2023-10-03
+### Changed
+- Change link colours to `neutral-500` for light mode.
+
 ## [1.2.2] - 2023-10-26
 ### Changed
 - Remove `404.html` page dependencies.
