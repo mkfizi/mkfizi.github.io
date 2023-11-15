@@ -1,6 +1,6 @@
 /**
  * --------------------------------------------------------------------------
- * mkfizi.dev v1.2.3: app.js
+ * mkfizi.dev v1.3.0: app.js
  * Licensed under MIT (https://github.com/mkfizi/mkfizi.github.io/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

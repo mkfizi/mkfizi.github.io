@@ -17,6 +17,15 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [1.3.0] - 2023-11-16
+### Added
+- Projects page.
+
+### Changed
+- Google Analytics tag.
+- Metadata description.
+- Revise gap space between list content.
+
 ## [1.2.3] - 2023-10-03
 ### Changed
 - Change link colours to `neutral-500` for light mode.
