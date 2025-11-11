@@ -7,7 +7,7 @@ image: "/src/assets/img/blog/2024/12/blog-post.jpg"
 tags: ["learn"]
 ---
 
-![Alt text](/src/assets/img/blog/2024/12/blog-post.jpg "Image Example 1")
+![Alt text](/img/blog/2024/12/blog-post.jpg "Image Example 1")
 
 # Lessons From the Hills
 
