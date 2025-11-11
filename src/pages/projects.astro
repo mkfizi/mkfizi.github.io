@@ -1,0 +1,64 @@
+---
+import WebLayout from '../layouts/partials/WebLayout.astro';
+import H1 from '../components/partials/H1.astro';
+import TextDisplay from '../components/partials/TextDisplay.astro';
+import Text from '../components/partials/Text.astro';
+import Project from '../components/partials/Project.astro';
+---
+
+<WebLayout title="Projects" page="Projects">
+	<section class="space-y-4">
+		<H1>Projects</H1>
+		<Text>Works that I have done so far.</Text>
+	</section>
+	<div class="sm:mx-auto sm:max-w-3/4">
+		<!-- <TextDisplay class="mt-16">Commercial</TextDisplay>
+		<section class="space-y-4 mt-4 divide-y divide-neutral-800 dark:divide-neutral-200">
+			<Project 
+				title="mefolio" 
+				description="Mini portfolio website CMS." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['AlpineJS', 'TailwindCSS', 'Laravel']}
+			/>
+			<Project 
+				title="upmonitor" 
+				description="Real-time website monitoring tool." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['AlpineJS', 'TailwindCSS', 'Laravel']}
+			/>
+		</section> -->
+		<TextDisplay class="mt-16">Non-Commercial</TextDisplay>
+		<section class="space-y-4 mt-4 divide-y divide-neutral-800 dark:divide-neutral-200">
+			<Project 
+				title="tailbone" 
+				description="Mini portfolio website CMS." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['AlpineJS', 'TailwindCSS']}
+			/>
+			<!-- <Project 
+				title="milestory" 
+				description="Real-time website monitoring tool." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['Laravel', 'AlpineJS', 'TailwindCSS']}
+			/>
+			<Project 
+				title="wishpad" 
+				description="Real-time website monitoring tool." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['Laravel', 'AlpineJS', 'TailwindCSS']}
+			/>
+			<Project 
+				title="flexdesk" 
+				description="Real-time website monitoring tool." 
+				href="https://example.com/project-a" 
+				repo="https://github.com/user/project-a"
+				techs={['Laravel', 'AlpineJS', 'TailwindCSS']}
+			/> -->
+		</section>
+	</div>
+</WebLayout>

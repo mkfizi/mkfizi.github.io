@@ -1,0 +1,62 @@
+---
+import WebLayout from '../../layouts/partials/WebLayout.astro';
+import H1 from '../../components/partials/H1.astro';
+import Text from '../../components/partials/Text.astro';
+import TextLink from '../../components/partials/TextLink.astro';
+import TextTitle from '../../components/partials/TextTitle.astro';
+import LinkNavbarActive from '../../components/partials/LinkNavbarActive.astro';
+import List from '../../components/partials/List.astro';
+import ListItem from '../../components/partials/ListItem.astro';
+
+const allPosts = Object.values(import.meta.glob('./**/*.md', { eager: true }));
+
+const posts = allPosts.filter((post: any) => {
+    const dateFormat = /^\d{4}-\d{2}-\d{2}$/;
+    const date = new Date(post.frontmatter.date.toString().slice(0,10));
+    if (!post.frontmatter?.date) return false;
+    if (!dateFormat.test(post.frontmatter.date.toString().slice(0,10))) return false;
+    if (isNaN(date.getTime())) return false;
+    return true;
+}).sort((a: any, b: any) => {
+    return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+}).reduce((acc: any, post: any) => {
+    const year = new Date(post.frontmatter.date.toString().slice(0,10)).getFullYear();
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(post);
+    return acc;
+}, {});
+
+const tags = Array.from(new Set(allPosts.flatMap((post: any) => post.frontmatter?.tags || [])));
+---
+
+<WebLayout title="Logs" page="Logs">
+	<section class="space-y-4">
+	<H1>Logs</H1>
+	<Text>I write to not forget.</Text>
+	<div class="space-y-4 mt-16">
+		{Object.entries(posts)
+			.sort((a, b) => parseInt(b[0]) - parseInt(a[0]))
+			.map(([year, postsByYear]: [string, any[]]) => (
+				<div key={year}>
+					<TextTitle>{year}</TextTitle>
+					<List>
+						{postsByYear.map((post: any) => (
+							<ListItem key={post.url}>
+								<TextLink href={post.url}>{post.frontmatter.title}</TextLink>
+							</ListItem>
+						))}
+					</List>
+				</div>
+			))}
+	</div>
+	<div class="mt-16">
+		{tags && tags.length > 0 && (
+			<div class="flex flex-wrap gap-4">
+				{tags.map((tag: string) => (
+					<LinkNavbarActive href={`/logs/tags/${tag.toLowerCase()}`} >{tag.charAt(0).toUpperCase() + tag.slice(1)}</LinkNavbarActive>
+				))}
+			</div>
+		)}
+	</div>
+</section>
+</WebLayout>

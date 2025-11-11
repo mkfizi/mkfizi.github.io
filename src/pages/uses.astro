@@ -1,0 +1,67 @@
+---
+import WebLayout from '../layouts/partials/WebLayout.astro';
+import H1 from '../components/partials/H1.astro';
+import TextDisplay from '../components/partials/TextDisplay.astro';
+import Text from '../components/partials/Text.astro';
+import Use from '../components/partials/Use.astro';
+---
+
+<WebLayout title="Uses" page="Uses">
+	<section class="space-y-4">
+		<H1>Uses</H1>
+		<Text>Stuffs I use everyday.</Text>
+	</section>
+	<div class="sm:mx-auto sm:max-w-3/4">
+		<TextDisplay class="mt-16">Workstations</TextDisplay>
+		<section class="space-y-4 mt-4 divide-y divide-neutral-800 dark:divide-neutral-200">
+			<Use 
+				title="Macbook Air M1" 
+				description="Most portable coding machine." 
+				specs={['CPU M1', 'RAM 16GB', 'SSD 512GB', 'macOS Tahoe', '13inch']}
+			/>
+			<Use 
+				title="Dell Optiplex 7040" 
+				description="Small homelab server." 
+				specs={['CPU i5-6500T', 'RAM 8GB', 'SSD 128GB', 'Ubuntu Server 24.04 LTS']}
+			/>
+			<Use 
+				title="Dell Latitude 3440" 
+				description="Work laptop for work stuffs." 
+				specs={['CPU i7-1355U', 'RAM 16GB', 'SSD 256GB', 'Windows 11 Pro']}
+			/>
+			<Use 
+				title="MSI MAG401QR" 
+				description="Big ass monitor." 
+				specs={['40inch','3440x1440 Resolution', '155Hz', '1ms', 'HDR400']}
+			/>
+		</section>
+		<TextDisplay class="mt-16">Applications</TextDisplay>
+		<section class="space-y-4 mt-4 divide-y divide-neutral-800 dark:divide-neutral-200">
+			<Use 
+				title="Visual Studio Code" 
+				description="Code editor for writing and editing code." 
+				specs={['Copilot']}
+			/>
+			<Use 
+				title="Tableplus" 
+				description="Database management tool." 
+			/>
+			<Use 
+				title="Docker" 
+				description="Containerization platform." 
+			/>
+			<Use 
+				title="Postman" 
+				description="API testing tool." 
+			/>
+			<Use 
+				title="Notion" 
+				description="Note-taking and organization tool." 
+			/>
+			<Use 
+				title="Figma" 
+				description="Design tool for creating user interfaces." 
+			/>
+		</section>
+	</div>
+</WebLayout>

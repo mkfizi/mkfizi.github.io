@@ -1,0 +1,11 @@
+---
+import Text from '../components/partials/Text.astro';
+import TextLink from '../components/partials/TextLink.astro';
+---
+
+<footer class="bottom-1 left-1/2 absolute px-4 sm:px-8 pb-px w-full max-w-screen-md -translate-x-1/2 transform">
+    <div class="flex justify-between">
+        <Text>Copyright @ <span x-text="new Date().getFullYear()"></span></Text>
+        <TextLink href="https://github.com/mkfizi/mkfizi.github.io" target="_blank">Source Code</TextLink>
+    </div>
+</footer>

@@ -1,0 +1,33 @@
+---
+import '../assets/css/app.css';
+import Head from '../components/Head.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const { 
+	title = null,
+	description = null,
+	page = null,
+    image = null,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" x-data="app">
+	<head>
+		<Head title={title} description={description} image={image}/>
+	</head>
+	<body class="relative bg-white dark:bg-neutral-950 min-h-dvh antialiased">
+        <!-- Navbar Component -->
+        <Navbar page={page} />
+        <!-- END Navbar Component -->
+        <!-- Content -->
+        <main class="mx-auto px-4 sm:px-8 pt-48 pb-32 w-full max-w-screen-md">  
+            <slot />
+        </main>
+        <!-- END Content -->   
+        <!-- Footer -->
+        <Footer />
+        <!-- END Footer -->
+    </body>
+</html>

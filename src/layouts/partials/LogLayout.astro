@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../BaseLayout.astro';
+import H1 from '../../components/partials/H1.astro';
+import Text from '../../components/partials/Text.astro';
+import TextLink from '../../components/partials/TextLink.astro';
+import LinkNavbarActive from '../../components/partials/LinkNavbarActive.astro';
+
+const { frontmatter } = Astro.props;
+const { 
+    title = frontmatter?.title,
+    date = frontmatter?.date,
+    description = frontmatter?.description,
+    image = frontmatter?.image,
+    tags = frontmatter?.tags,
+	page = 'Logs',
+    headings = getHeadings(),
+} = Astro.props;
+---
+
+<BaseLayout title={title} page={page} description={description} image={image}>
+     <div class="relative">
+        <H1>{title}</H1>
+        <Text class="mt-4">Published on: {date?.toString().slice(0,10)}</Text>
+        <!-- Markdown Content -->
+        <div class="space-y-8 mt-8 markdown">
+            <slot/>
+        </div>
+        <!-- END Markdown Content -->
+        <!-- Tags -->
+        <div class="space-y-4 mt-16">
+            <p class="font-medium text-neutral-800 dark:text-neutral-200 text-base">Tags:</p>
+            {tags && tags.length > 0 && (
+                <div class="flex flex-wrap gap-2">
+                    {tags.map((tag: string) => (
+                        <LinkNavbarActive href={`/blog/tags/${tag.toLowerCase()}`} >{tag.charAt(0).toUpperCase() + tag.slice(1)}</LinkNavbarActive>
+                    ))}
+                </div>
+            )}
+        </div>
+        <!-- END Tags -->
+        <div class="mt-16">
+            <TextLink href="/logs" class="font-medium text-neutral-500 hover:dark:text-white hover:text-black focus:dark:text-white focus:text-black visited:text-neutral-700 dark:text-neutral-400 dark:visited:text-neutral-200 text-sm cursor-pointer">&larr; Back</TextLink>
+        </div>
+    </div>
+</BaseLayout>

@@ -1,0 +1,47 @@
+---
+import WebLayout from '../../../layouts/partials/WebLayout.astro';
+import H1 from '../../../components/partials/H1.astro';
+import Text from '../../../components/partials/Text.astro';
+import TextLink from '../../../components/partials/TextLink.astro';
+import List from '../../../components/partials/List.astro';
+import ListItem from '../../../components/partials/ListItem.astro';
+import LinkNavbarActive from '../../../components/partials/LinkNavbarActive.astro';
+
+export async function getStaticPaths() {
+    const allPosts = Object.values(import.meta.glob('../**/*.md', { eager: true }));
+
+    // Get all tags from all posts
+    const tags = Array.from(
+        new Set(
+            allPosts.flatMap(post => post.frontmatter?.tags ?? [])
+        )
+    );
+
+    // Generate a path for each tag
+    return tags.map(tag => ({
+        params: { tag },
+        props: { posts: allPosts.filter(post => post.frontmatter?.tags?.includes(tag)) }
+    }));
+}
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+const postsByTag = posts.filter((post: any) => post.frontmatter.tags?.includes(tag));
+---
+<WebLayout title={capitalizedTag} page="Logs">
+	<section class="space-y-4 mt-32">
+        <H1>Logs</H1>
+        <Text>Posts tagged with "{capitalizedTag}".</Text>
+        <List class="mt-8">
+            {postsByTag.map((post: any) => (
+                <ListItem key={post.url}>
+                    <TextLink href={post.url}>{post.frontmatter.title}</TextLink>
+                </ListItem>
+            ))}
+        </List>
+        <div class="mt-8">
+            <LinkNavbarActive href="/logs">&larr; Back</LinkNavbarActive>
+        </div>
+    </section>
+</WebLayout>
+

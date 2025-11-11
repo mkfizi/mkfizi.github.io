@@ -1,0 +1,75 @@
+---
+const {
+    title = null,
+    site = "Khafizi Noh",
+    description = "Khafizi Noh is a skilled full-stack web developer from Cyberjaya, Malaysia, specialized in web development.",
+    url = 'https://mkfizi.dev',
+    image = '/src/assets/img/meta-og.jpg',
+    twitterImage = '/src/assets/img/meta-card.jpg',
+} = Astro.props;
+---
+<!-- Prevent FOUC -->
+<script is:inline>
+    // Toggle theme.
+    // localStorage.theme = 'dark';
+    document.documentElement.classList.toggle('dark', localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches) || (localStorage.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches));
+</script>
+<!-- END Prevent FOUC -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCM436PKG3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BCM436PKG3');
+</script>
+
+<!-- Metadata -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<meta name="generator" content={Astro.generator} />
+<!-- END Metadata -->
+<!-- SEO -->
+<meta name="title" content={title}>
+<meta name="description" content={description}>
+<meta name="robots" content="index, follow">
+<!-- END SEO -->	
+<!-- Facebook Open Graph -->
+<meta property="og:url" content={url}>
+<meta property="og:type" content="website">
+<meta property="og:title" content={title}>
+<meta property="og:image" content={image}>
+<meta property="og:description" content={description}>
+<meta property="og:site_name" content={site}>
+<!-- END Facebook Open Graph -->
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content={site}>
+<meta name="twitter:creator" content="@mkfizi">
+<meta name="twitter:url" content={url}>
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={twitterImage}>
+<!-- END Twitter Card -->
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="manifest" href="/manifest.json">
+<!-- END Favicon -->
+<!-- Fonts -->
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/Montserrat/Montserrat-Regular.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/Montserrat/Montserrat-Italic.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/Montserrat/Montserrat-Bold.ttf" crossorigin>
+ <link rel="preload" as="font" type="font/ttf" href="/fonts/Montserrat/Montserrat-BoldItalic.ttf" crossorigin>
+
+<title>{title && `${title} |`} {site}</title>

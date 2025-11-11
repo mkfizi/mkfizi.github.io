@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+@import './markdown.css';
+@import './shiki.css';
+
+/* Use manual selector insted of media query for dark theme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/**
+* Hide elements with x-cloak attribute.
+* This is useful for Alpine.js components that should not be visible before Alpine.js is initialized.
+*/
+[x-cloak] { display: none !important; }
+
+/* Fonts */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2, h3, h4, .text-header {
+    font-family: 'Montserrat', sans-serif;
+    paint-order: stroke fill;
+    -webkit-text-stroke: 2px black;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark .text-header {
+    -webkit-text-stroke: 2px white; 
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}

@@ -1,0 +1,23 @@
+---
+import TextTitle from "./TextTitle.astro";
+import Badge from "./Badge.astro";
+import Text from "./Text.astro";
+
+const { 
+    title = '', 
+    description = '',
+    specs = []
+} = Astro.props;
+---
+
+<div class="space-y-4 py-4">
+    <TextTitle>{title}</TextTitle>
+    <Text>{description}</Text>
+    { specs.length > 0 ? (
+        <div class="flex flex-wrap gap-2">
+            {specs.map((techItem) => (
+                <Badge key={techItem}>{techItem}</Badge>
+            ))}
+        </div>
+    ) : null }
+</div>

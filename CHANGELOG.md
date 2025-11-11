@@ -17,6 +17,15 @@ Types of changes:
 ## [Unreleased]
 Put unreleased changes here.
 
+## [2.0.0] - 2025-11-12
+### Added
+- Log journal.
+
+### Changed
+- Convert to Astro.
+- Revise UI style.
+- Upgrade dependancies.
+
 ## [1.3.0] - 2023-11-16
 ### Added
 - Projects page.

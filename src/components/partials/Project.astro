@@ -1,0 +1,25 @@
+---
+import LinkNavbarActive from "./LinkNavbarActive.astro";
+import Badge from "./Badge.astro";
+import Text from "./Text.astro";
+
+const { 
+    title = '', 
+    description = '', 
+    href = '', 
+    repo = '', 
+    techs = []
+} = Astro.props;
+---
+
+<div class="space-y-4 py-4">
+    <LinkNavbarActive class="inline-block" href={href}>{title}</LinkNavbarActive>
+    <Text>{description}</Text>
+    { techs.length > 0 ? (
+        <div class="flex flex-wrap gap-2">
+            {techs.map((techItem) => (
+                <Badge key={techItem}>{techItem}</Badge>
+            ))}
+        </div>
+    ) : null }
+</div>

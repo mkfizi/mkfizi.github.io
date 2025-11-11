@@ -1,0 +1,60 @@
+/**
+* Global styles for markdown content.
+*/
+
+/* Headings */
+.markdown :where(h1) {
+    @apply mt-16 font-bold text-white dark:text-neutral-950 text-3xl sm:text-4xl lg:text-5xl uppercase;
+}
+
+.markdown :where(h2) {
+    @apply mt-12 font-bold text-white dark:text-neutral-950 text-2xl sm:text-3xl lg:text-4xl uppercase;
+}
+
+.markdown :where(h3) {
+    @apply mt-8 font-bold text-white dark:text-neutral-950 text-xl sm:text-2xl lg:text-3xl uppercase; 
+}
+
+/* Paragraphs */
+.markdown :where(p) {
+    @apply text-neutral-800 dark:text-neutral-200 text-sm sm:text-base;
+}
+
+/* Links */
+.markdown :where(a) {
+    @apply font-medium text-neutral-500 hover:dark:text-white hover:text-black focus:dark:text-white focus:text-black visited:text-neutral-700 dark:text-neutral-400 dark:visited:text-neutral-200 text-sm sm:text-base underline cursor-pointer;
+} 
+
+/* Lists */
+.markdown :where(ul) {
+    @apply space-y-1 mt-2 leading-0;
+}
+.markdown :where(ol) {
+    @apply space-y-1 mt-2 ml-4 leading-0 list-decimal;
+}
+.markdown :where(li) {
+    @apply text-neutral-800 dark:text-neutral-200 text-sm sm:text-base;
+}
+.markdown ul > li {
+    @apply relative pl-4;
+}
+.markdown ul > li::before {
+    content: '-';
+    @apply left-0 absolute text-neutral-800 dark:text-neutral-200 text-sm sm:text-base;
+}
+
+
+/* Images */
+.markdown :where(img) {
+    @apply w-full h-auto object-cover;
+}
+
+/* Blockquotes */
+.markdown :where(blockquote) {
+    @apply p-4 border-black dark:border-white border-l-4;
+}
+
+/* Divider */
+.markdown :where(hr) {
+    @apply border-black dark:border-white;
+}

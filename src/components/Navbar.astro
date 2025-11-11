@@ -1,0 +1,97 @@
+---
+import LinkNavbar from '../components/partials/LinkNavbar.astro';
+import LinkNavbarActive from '../components/partials/LinkNavbarActive.astro';
+
+const { page } = Astro.props;
+console.log('Current page:', page); // This will print to your terminal
+const links = [
+    { name: "Projects", href: '/projects' },
+    { name: "Uses", href: '/uses' },
+    { name: "Logs", href: '/logs' },
+];
+---
+
+<nav class="top-0 z-10 sticky w-full"
+    x-data="{
+        breakpoint: 1024,
+        isNavbarMenuOpen: false,
+        isScrolled: window.scrollY > 0
+    }"
+    @resize.window="
+        if (window.innerWidth >= breakpoint) {
+            isNavbarMenuOpen = false;
+        }
+    "
+    @scroll.window="isScrolled = window.scrollY > 0;"
+    :class="isScrolled
+        ? 'bg-white dark:bg-neutral-950 border-b border-black dark:border-white'
+        : 'bg-transparent dark:bg-transparent border-transparent'"
+>
+    <div class="flex justify-between items-center mx-auto px-4 sm:px-8 py-2 max-w-screen-md">
+        <a href="/" class="flex items-center" aria-label="Navigate to Home.">
+            <span class="before:top-3 after:right-1.5 after:bottom-0 before:left-1.5 before:absolute after:absolute relative bg-black before:bg-white after:bg-white dark:before:bg-neutral-900 dark:after:bg-neutral-900 dark:bg-white w-6 before:w-1.5 after:w-1.5 h-6 before:h-3 after:h-1.5"></span>
+        </a>
+        <div class="flex items-center gap-2 lg:gap-6">
+            <!-- Navbar Menu -->
+            <div id="navbar-menu" class="hidden invisible lg:visible lg:block top-0 lg:top-auto left-0 lg:left-auto z-10 lg:z-auto fixed lg:relative bg-black/80 lg:bg-transparent w-dvw lg:w-auto h-dvh lg:h-auto"
+                x-trap.noautofocus.noscroll="isNavbarMenuOpen && window.innerWidth < breakpoint"
+                @click.self="isNavbarMenuOpen = false"
+                @keydown.escape.window="isNavbarMenuOpen = false"
+                :class="{ 'hidden invisible' : !isNavbarMenuOpen || window.innerWidth >= breakpoint }"
+                :inert="!isNavbarMenuOpen && window.innerWidth < breakpoint"
+            >
+                <!-- Navbar Menu Drawer -->
+                <div class="top-0 right-0 fixed lg:relative bg-white lg:bg-transparent dark:bg-neutral-950 px-4 sm:px-8 lg:px-0 py-4 lg:py-0 border-neutral-200 lg:border-0 dark:border-neutral-800 border-r w-full sm:w-64 lg:w-auto h-full lg:h-auto overflow-y-auto lg:overflow-y-visible">
+                    <!-- Navbar Menu Close -->
+                    <button type="button" class="lg:hidden lg:invisible top-2 right-4 sm:right-8 absolute hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 disabled:opacity-60 p-2 font-medium text-black dark:text-white text-sm cursor-pointer disabled:pointer-events-none" aria-controls="navbar-menu" aria-label="Close navbar menu."
+                        @click="isNavbarMenuOpen = false"
+                        :aria-expanded="isNavbarMenuOpen"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black dark:stroke-white w-5 h-5" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg>
+                    </button>
+                    <!-- END Navbar Menu Close -->
+                    <!-- Navbar Menu Links -->
+                    <ul class="lg:flex lg:items-center lg:gap-4 space-y-1 lg:space-y-0 mt-8 lg:mt-0 leading-0">
+                        {links.map((link) => (
+                            <li>
+                                {page === link.name ? (
+                                    <LinkNavbarActive href={link.href}>{link.name}</LinkNavbarActive>
+                                ) : (
+                                    <LinkNavbar href={link.href}>{link.name}</LinkNavbar>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
+                    <!-- END Navbar Menu Links -->
+                </div>
+                <!-- END Navbar Menu Drawer -->
+            </div>  
+            <!-- END Navbar Menu -->
+            <!-- Dark Mode Component -->
+                <button type="button" class="hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 disabled:opacity-60 p-2 font-medium text-black dark:text-white text-sm cursor-pointer disabled:pointer-events-none" aria-label="Toggle dark mode."
+                    x-data="{ 
+                        isDark: document.documentElement.classList.contains('dark'),
+                        toggleTheme() {
+                            this.isDark = !this.isDark;
+                            const theme = this.isDark ? 'dark' : 'light';
+                            localStorage.theme = theme;
+                            document.documentElement.classList.toggle('dark', this.isDark);
+                        },
+                    }"
+                    @click="toggleTheme()"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="dark:hidden stroke-black w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"/><path d="M6.343 17.657l-1.414 1.414"/><path d="M6.343 6.343l-1.414 -1.414"/><path d="M17.657 6.343l1.414 -1.414"/><path d="M17.657 17.657l1.414 1.414"/><path d="M4 12h-2"/><path d="M12 4v-2"/><path d="M20 12h2"/><path d="M12 20v2"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hidden dark:block stroke-white w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg>
+                </button>
+                <!-- END Dark Mode Component  -->
+            <!-- Navbar Menu Open -->
+            <button type="button" class="lg:hidden lg:invisible hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800 disabled:opacity-60 p-2 font-medium text-black dark:text-white text-sm cursor-pointer disabled:pointer-events-none" aria-controls="navbar-menu" aria-label="Open navbar menu."
+                @click="isNavbarMenuOpen = true"
+                :aria-expanded="isNavbarMenuOpen"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-black dark:stroke-white w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6l16 0"/><path d="M4 12l16 0"/><path d="M4 18l16 0"/></svg>
+            </button>
+            <!-- END Navbar Menu Open -->
+        </div>
+    </div>
+</nav>
