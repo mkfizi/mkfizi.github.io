@@ -6,9 +6,7 @@ import shiki from './astro.plugins/shiki.ts';
 export default defineConfig({
     // Site metadata.
     site: "https://mkfizi.dev",
-
-    // By default, Astro outputs to './dist'. Change this to './docs' to deploy to GitHub Pages.
-    outDir: './docs',
+    outDir: './dist',
 
     // Set 'enable' to 'false' to disable Astro dev toolbar.
     devToolbar: {
