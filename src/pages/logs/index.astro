@@ -49,7 +49,7 @@ function formatMMDD(dateLike: any) {
 					<List>
 						{postsByYear.map((post: any) => (
 							<ListItem key={post.url}>
-								<TextLink href={post.url}>[{formatMMDD(post.frontmatter.date)}] {post.frontmatter.title}</TextLink>
+								<TextLink href={post.url}><span class="font-mono">[{formatMMDD(post.frontmatter.date)}]</span>&nbsp;{post.frontmatter.title}</TextLink>
 							</ListItem>
 						))}
 					</List>
