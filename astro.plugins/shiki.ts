@@ -7,19 +7,14 @@ import {
 } from '@shikijs/transformers'
 
 // Configuration
-const config = {
-    themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-    },
+const config: object = {
+    theme: { light: 'github-light', dark: 'github-dark' },
     langs: ['js', 'ts', 'json', 'html', 'css', 'bash', 'markdown'],
-    wrap: true,
+    wrap: false
 };
 
-
-
 // Shiki transformers configuration
-const transformers = [
+const transformers: array = [
     transformerNotationDiff(),
     transformerNotationHighlight(),
     transformerNotationWordHighlight(),
@@ -98,7 +93,7 @@ const transformers = [
     }
 ];
 
-const shiki = {
+const shiki: object = {
     ...config,
     transformers,
 };

@@ -20,9 +20,10 @@ html.dark .astro-code span {
 }
 
 /* Code title styles */
-.code-header{
+.code-header {
     @apply flex px-4 pt-4;
 }
+
 .code-header > p {
     @apply inset-ring inset-ring-neutral-800 dark:inset-ring-neutral-200 px-2 font-mono text-neutral-800 dark:text-neutral-200 text-sm sm:text-base;
 }
@@ -38,7 +39,7 @@ html.dark .astro-code span {
 
 /* Shiki pre styles */
 .astro-code {
-    @apply overflow-x-auto break-all whitespace-pre-wrap;
+    @apply overflow-x-auto;
 }
 
 .astro-code code {

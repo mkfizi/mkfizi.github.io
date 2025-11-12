@@ -23,6 +23,7 @@ export async function getStaticPaths() {
         props: { posts: allPosts.filter(post => post.frontmatter?.tags?.includes(tag)) }
     }));
 }
+
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
