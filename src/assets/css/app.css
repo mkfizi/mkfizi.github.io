@@ -14,7 +14,7 @@
 /* Fonts */
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
+    src: url('/font/SpaceGrotesk/SpaceGrotesk-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Medium.ttf') format('truetype');
+    src: url('/font/SpaceGrotesk/SpaceGrotesk-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -30,7 +30,7 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('/fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
+    src: url('/font/SpaceGrotesk/SpaceGrotesk-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -38,14 +38,14 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/Montserrat/Montserrat-Italic.ttf') format('truetype');
+    src: url('/font/Montserrat/Montserrat-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    src: url('/font/Montserrat/Montserrat-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -53,7 +53,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
+    src: url('/font/Montserrat/Montserrat-BoldItalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
     font-display: swap;
@@ -61,7 +61,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    src: url('/font/Montserrat/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;

@@ -58,3 +58,8 @@
 .markdown :where(hr) {
     @apply border-black dark:border-white;
 }
+
+/* Inline code */
+.markdown :where(code):not(:where(pre code)) {
+    @apply px-1 border border-black dark:border-white;
+}
