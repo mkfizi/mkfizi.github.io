@@ -1,1 +1,1 @@
-[![mkfizi](./src/assets/img/cover.png)](https://mkfizi.github.io)
+[![mkfizi](./img/cover.png)](https://mkfizi.github.io)
