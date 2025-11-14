@@ -8,7 +8,7 @@ import {
 
 // Configuration
 const config: object = {
-    theme: { light: 'github-light', dark: 'github-dark' },
+    themes: { light: 'min-light', dark: 'min-dark' },
     langs: ['js', 'ts', 'json', 'html', 'css', 'bash', 'markdown'],
     wrap: false
 };
