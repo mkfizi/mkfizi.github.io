@@ -25,11 +25,11 @@ Let's start simple where we define all data and logic directly in the markup usi
     }"
 >
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="minus()"
+        x-on:click="minus()"
     >-</button>
     <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="add()"
+        x-on:click="add()"
     >+</button>
 </div>
 ```
@@ -44,11 +44,11 @@ Now we will have:
         }"
     >
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="minus()"
+            x-on:click="minus()"
         >-</button>
         <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="add()"
+            x-on:click="add()"
         >+</button>
     </div>
 </div>
@@ -69,11 +69,11 @@ To make the component reusable, we will need encapsulate the logic in `x-data` a
     x-data="counter"
 >
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="minus()"
+        x-on:click="minus()"
     >-</button>
     <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="add()"
+        x-on:click="add()"
     >+</button>
 </div>
 <script>
@@ -93,11 +93,11 @@ Now we will have:
         x-data="counter"
     >
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="minus()"
+            x-on:click="minus()"
         >-</button>
         <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="add()"
+            x-on:click="add()"
         >+</button>
     </div>
     <script>
@@ -126,11 +126,11 @@ Now for larger or modular projects, we will build our component login in a separ
     x-data="counter"
 >
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="minus()"
+        x-on:click="minus()"
     >-</button>
     <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
     <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-        @click="add()"
+        x-on:click="add()"
     >+</button>
 </div>
 ```
@@ -172,11 +172,11 @@ And we will finally have a working component that suits for more modular project
         x-data="counter"
     >
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="minus()"
+            x-on:click="minus()"
         >-</button>
         <p x-text="number" class="w-12 py-2 border border-black dark:border-white text-center cursor-default"></p>
         <button type="button" class="px-4 py-2 border border-black dark:border-white bg-black text-white dark:bg-white dark:text-black cursor-pointer"
-            @click="add()"
+            x-on:click="add()"
         >+</button>
     </div>
     <script>
